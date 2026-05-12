@@ -1,0 +1,158 @@
+{
+    "toolNumber": 11,
+    "title": "Values, Attributes and Management Objectives",
+    "languages": ["English"],
+    "year": 2024,
+    "organization": "UNESCO World Heritage / IUCN",
+    "chapter": "Management Planning",
+    "chapterKey": "management-planning",
+    "subChapter": "Enhancing Our Heritage (EoH 2.0)",
+    "type": "Assessment tool with worksheets",
+    "purpose": "This tool helps to establish whether there is a clear understanding and identification of the values of the World Heritage property or other heritage place. In addition, it sets the basis for the management effectiveness assessment and the use of the other tools in EoH 2.0.",
+    "specificObjectives": [
+        "To establish whether there is a good understanding of the Outstanding Universal Value of the World Heritage property and its attributes.",
+        "To assess if there is a good understanding, identification and documentation of the other important values of the property and the attributes that convey those values.",
+        "To review if there are clear management objectives to guide the management of the property and whether those objectives are clearly based on the Outstanding Universal Value and other important values of the property."
+    ],
+    "backgroundInfo": "The Outstanding Universal Value of a World Heritage property is the reason why the property is considered to be of common importance for present and future generations and inscribed on the World Heritage List. However, all properties will invariably have a wider range of values at different levels of recognition (international, national or local) that contribute to the overall significance of the property. Therefore, it is essential to identify and recognize these other important values and ensure that the property's management system takes them into consideration.\n\nThe main concern for management should be to maintain the Outstanding Universal Value as well as the other important values of the property. In the case of heritage places not inscribed on the World Heritage List, a similar logic applies: while some values might have a broader level of recognition (e.g. if the place is designated at the national level), local communities may value it for different reasons. These local values may even differ among community groups. This understanding of the full range of the values of the heritage place, whether inscribed on the World Heritage List or not, should be reflected in clear management objectives that guide all aspects of the management system. Clear management objectives will also help focus attention on what is most important when difficult decisions have to be made and scarce resources allocated.\n\nTogether the values, attributes and management objectives for the property provide the basis for what should be analysed and evaluated throughout the whole assessment process. Hence, Tool 1 includes two worksheets:\n\n• Worksheet 1a is designed to assess the identification and documentation of the values of the property and the attributes that convey those values.\n• Worksheet 1b is designed to relate the values and attributes of the property to the management objectives.",
+    "worksheetGuidance": {
+        "worksheet1a": {
+            "title": "Completing Worksheet 1A",
+            "intro": "The findings of Tool 1 will underpin the analyses required for the other tools and, in particular for Tool 11, which requires you to assess the extent to which the attributes are conserved and the values of the property are being maintained. Therefore, it is important that you invest sufficient time during the assessment to complete worksheets 1a and 1b in detail, especially the sections on ‘Analysis and conclusions’ and ‘Gaps and challenges’.\n\nThe first task in Worksheet 1a is to list the values and attributes of the property according to their level of importance (OUV, national or local). Understanding the different levels should help you to i) prioritize actions if there are conflicts between values and ii) recognize that values are interrelated and that the protection of those other important values is critical to maintaining the OUV of the property.\n\nWorksheet 1a will also help you evaluate whether the attributes that convey the values of the property have been sufficiently identified, are well understood, and if they are the focus of management measures.\n\nIdentifying values and attributes and, in particular, distinguishing between the two concepts (Section 3.3) is not an easy task, but it is a critical one, as it will help you make full use of the other tools. There is no right or wrong way to go about this task, since values and attributes can be framed in different ways. When in doubt, focus on the main objectives of the tool rather than on the details of the concepts themselves.",
+            "reflectionQuestions": [
+                "Is the Outstanding Universal Value of the property easy to understand, including by non-heritage professionals? If not, can you describe it using short and simple sentences easier to communicate to a wide variety of actors?",
+                "How about the other important values of the property? Have they been identified and documented or recorded (including through traditional or customary oral sources)? Are the information sources accessible and/or securely stored?",
+                "Are the values described in information sources used by managers on a regular basis to guide the management of the property? For instance, are they included in the management plan or other primary planning instrument? Or are they documented in academic and research papers that have not been taken into consideration by management, or are not readily accessible?",
+                "What is the relationship between the other important values and the Outstanding Universal Value of the property? Are some of these values interdependent? Are some of the values divergent or in conflict? If yes, why and how does it affect management?",
+                "Are there certain categories of values that have been overlooked or insufficiently documented or recorded? If so, is additional research needed or should further investigation and documentation be undertaken, and by whom?",
+                "Have rights-holders and/or local communities been involved in the identification of the values of the property, particularly at the time when the property was nominated for the World Heritage List?",
+                "Are the attributes of the property clearly and sufficiently identified and documented?",
+                "Have processes, practices and associations, as well as other intangible elements, been considered as attributes, or is the identification of attributes mainly limited to physical elements?",
+                "Is the distinction between values and attributes in the information sources clear?"
+            ],
+            "table": {
+                "title": "Worksheet 1a. Assessment of values and attributes",
+                "columns": ["Level of recognition", "Values", "Attributes", "Sources of information used"],
+                "rows": [
+                    { "level": "OUV", "values": "", "attributes": "", "sources": "" },
+                    { "level": "OUV", "values": "", "attributes": "", "sources": "" },
+                    { "level": "OUV", "values": "", "attributes": "", "sources": "" },
+                    { "level": "National", "values": "", "attributes": "", "sources": "" },
+                    { "level": "National", "values": "", "attributes": "", "sources": "" },
+                    { "level": "National", "values": "", "attributes": "", "sources": "" },
+                    { "level": "Local", "values": "", "attributes": "", "sources": "" },
+                    { "level": "Local", "values": "", "attributes": "", "sources": "" },
+                    { "level": "Local", "values": "", "attributes": "", "sources": "" }
+                ],
+                "footerRows": [
+                    { "label": "Analysis and conclusions", "colspan": 3 },
+                    { "label": "Gaps and challenges", "colspan": 3 },
+                    { "label": "Opportunities, recommendations and follow-up actions", "colspan": 3 }
+                ]
+            }
+        },
+        "worksheet1b": {
+            "title": "Completing Worksheet 1B",
+            "intro": "Maintaining the Outstanding Universal Value and the other important values of the property should be the primary concern for management, and this should be reflected in clear management objectives. Each value and the key attributes associated with it should normally have one or more associated objectives.\n\nHowever, management is also about other aims – such as the need to ensure the function of heritage in the life of the local communities, its presentation to visitors or its contribution to sustainable development. Such aims should also be reflected in the management objectives for the property (see Box 5.1). However, if there is conflict between different aims, priority should always be given to maintaining the values of the property. Together, values, attributes and management objectives should act as the guiding principles or foundations for the whole management system.\n\nDistinguishing between management objectives and what is to be actually achieved over a specific time period (i.e., desired management outcomes) can cause confusion. Management objectives refer to the primary aims that guide the management of the World Heritage property and ensure that its values are maintained over the long term. Because of their overarching nature, management objectives by themselves are not sufficient to direct everyday management in a precise way. They need to be complemented by desired management outcomes, which define what is to be actually achieved in a management cycle or a specified period of time. Through planning processes, desired management outcomes help to translate the management objectives into work programmes and take into consideration how factors affecting the property impact (or can potentially impact) the attributes. For further information on distinguishing between management objectives and desired management outcomes, see Box 5.2 and if needed, re-read Section 3.3.",
+            "boxes": [
+                {
+                    "id": "box5_1",
+                    "title": "Box 5.1 Heritage management and sustainable development",
+                    "type": "info",
+                    "content": "The inclusion of heritage as a part of the Sustainable Development Goals (related to target 11.4 'Strengthen efforts to protect and safeguard the world's cultural and natural heritage') is a long-overdue acknowledgement of its role within the wider development agenda. However, the growing pressures from a host of unprecedented challenges for heritage raises the question of how best to strike a balance between conservation and development, while maintaining the values of heritage places. How does heritage management engage with sustainable development, at a policy or operational level?\n\nIf the task of protecting and managing heritage is to be effective, it must be interwoven with efforts to improve the health of the planet and all its inhabitants. This calls for an alignment of heritage management objectives and development aims. In this spirit, the <a href=\"https://whc.unesco.org/en/sustainabledevelopment\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-primary hover:underline\">Policy for the Integration of a Sustainable Development Perspective into the Processes of the World Heritage Convention (2015)</a>, seeks to harness the potential of heritage to contribute to sustainable development, while noting that the primary objective of the World Heritage Convention, to protect the world cultural and natural heritage, should not be compromised. The policy identifies four core dimensions: (i) inclusive social development (championing human rights, gender equality and Indigenous peoples and local communities), (ii) environmental sustainability (including resilience to disasters and climate change), (iii) inclusive economic development and (iv) peace and security. The effective implementation of this policy requires reflecting on existing frameworks for heritage management and radically changing our approach to designing management objectives and mechanisms at heritage places."
+                },
+                {
+                    "id": "box5_2",
+                    "title": "Box 5.2. Distinguishing between management objectives and desired management outcomes",
+                    "type": "warning",
+                    "note": "Note that there is not a direct correspondence between the examples given here for management objectives with those of desired management outcomes.",
+                    "content": "",
+                    "exampleObjectives": [
+                        "To preserve the traditional building techniques associated with wooden architecture.",
+                        "To protect the mangroves along the coastline of the property.",
+                        "To maintain the historic green spaces within the city centre.",
+                        "To maintain the townscape character of the traditional human settlement.",
+                        "To maintain the wine-making industry as the key economic activity within the cultural landscape.",
+                        "To preserve the pilgrimage routes to the sacred places.",
+                        "To maintain the habitat necessary to the survival of the endangered species."
+                    ],
+                    "exampleOutcomes": [
+                        "Number of skilled craftspersons increased by at least 20% by 2026.",
+                        "Mangroves restored back to 60% of original extent by 2030.",
+                        "Historic garden within northern area of the historic urban centre fully rehabilitated by 2027.",
+                        "Overfishing of a particular species (state which one) significantly reduced by 2025 by working in collaboration with fishing communities.",
+                        "Interpretation of the property enhanced by working with rights-holders to improve the quality of guided visits within the property.",
+                        "Gazettement of the community-conserved areas within the buffer zone of the property completed.",
+                        "Visitor management enhanced through the construction of a new visitor centre."
+                    ],
+                    "footerNote": "When no time-frame is given for an outcome, it should be assumed that this is to be achieved by the end date of the current management plan or primary planning instrument."
+                }
+            ],
+            "postBoxesIntro": "Worksheet 1b is structured to help you assess whether there are both clear management objectives and desired management outcomes for the property. Some World Heritage properties may lack both, particularly if there is no management plan, or if that plan has not been reviewed. EoH 2.0, and Tool 1 specifically, is not a method for developing management objectives or desired management outcomes and cannot replace effective planning processes. If management objectives are missing, unclear or inadequate, this indicates a need to develop or improve planning processes for the property and should be noted under ‘Gaps and challenges’. Clear and well-stated management objectives and desired management outcomes are the cornerstone of management planning. They are not something that can be resolved quickly during the assessment process.",
+            "reflectionQuestions": [
+                "Have management objectives for the World Heritage property or heritage place been identified?",
+                "Are the objectives clearly linked to the values and attributes of the property?",
+                "Are the objectives specific enough to guide the management system for the property?",
+                "Do the objectives also address how the property can contribute to other societal goals, such as sustainable development, community well-being and the generation of services and benefits?",
+                "Are the management objectives clearly distinguishable from desired management outcomes?",
+                "Are the management objectives distinguishable from other aims (such as organizational objectives or a vision for the property)?",
+                "Have desired management outcomes been identified as part of the planning processes?",
+                "Are these desired outcomes realistic and objectively verifiable?",
+                "Have desired outcomes been defined in relation to the management objectives as well as the factors affecting the property?"
+            ]
+        }
+    },
+    "caution": "Remember that you should complete the main sections of the worksheet based on the information gathered during Phase 2 of the assessment (Section 4.2). If the information is missing or is insufficient, you should leave the relevant section of the worksheet blank or incomplete and note the reasons for this under 'Gaps and challenges' at the end of the worksheet.",
+    "tags": [
+        "World Heritage",
+        "OUV",
+        "values",
+        "attributes",
+        "management objectives",
+        "EoH 2.0",
+        "assessment",
+        "worksheet",
+        "heritage management"
+    ],
+    "worksheets_from_excel": {
+        "1a": {
+            "worksheet_name": "1a",
+            "rows": [
+                ["Worksheet 1a. Assessment of values and attributes", "", "", ""],
+                ["Level of recognition", "Values", "Attributes", "Sources of information used"],
+                ["OUV", "", "", ""],
+                ["", "", "", ""],
+                ["", "", "", ""],
+                ["National", "", "", ""],
+                ["", "", "", ""],
+                ["", "", "", ""],
+                ["Local", "", "", ""],
+                ["", "", "", ""],
+                ["", "", "", ""],
+                ["Analysis and conclusions", "", "", ""],
+                ["Gaps and challenges", "", "", ""],
+                ["Opportunities, recommendations and follow-up actions", "", "", ""]
+            ]
+        },
+        "1b": {
+            "worksheet_name": "1b",
+            "rows": [
+                ["Worksheet 1b. Assessment of management objectives", "", "", "", "", ""],
+                ["Management objectives", "Values and attributes", "Sources of information used", "", "Comments", ""],
+                ["", "", "", "", "", ""],
+                ["", "", "", "", "", ""],
+                ["", "", "", "", "", ""],
+                ["", "", "", "", "", ""],
+                ["", "", "", "", "", ""],
+                ["Desired management outcomes", "Values and attributes", "Sources of information used", "", "Comments", ""],
+                ["", "", "", "", "", ""],
+                ["", "", "", "", "", ""],
+                ["", "", "", "", "", ""],
+                ["", "", "", "", "", ""],
+                ["Analysis and conclusions", "", "", "", "", ""],
+                ["Gaps and challenges", "", "", "", "", ""],
+                ["Opportunities, recommendations and follow-up actions", "", "", "", "", ""]
+            ]
+        }
+    }
+}

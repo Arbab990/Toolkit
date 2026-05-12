@@ -1,0 +1,57 @@
+[
+    {
+        "key": "policy-legal-framework",
+        "label": "Policy and Legal Framework",
+        "sectionNumber": "3.1",
+        "tools": [
+            1,
+            2
+        ]
+    },
+    {
+        "key": "spatial-planning",
+        "label": "Spatial Planning",
+        "sectionNumber": "3.2",
+        "tools": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+        ],
+        "subChapters": [
+            {
+                "key": "site-prioritization",
+                "label": "Site Prioritization Methods and Approaches",
+                "sectionNumber": "3.2.1",
+                "tools": [
+                    3,
+                    4,
+                    5
+                ]
+            },
+            {
+                "key": "pa-system-planning",
+                "label": "Protected and Conserved Area System Planning, Integrated Gap Analysis, Zoning",
+                "sectionNumber": "3.2.2",
+                "tools": [
+                    6,
+                    7,
+                    8,
+                    9,
+                    10
+                ]
+            }
+        ]
+    },
+    {
+        "key": "management-planning",
+        "label": "Management Planning",
+        "sectionNumber": "3.3",
+        "tools": [],
+        "note": "Coming soon"
+    }
+]

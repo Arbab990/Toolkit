@@ -1,0 +1,535 @@
+[
+    {
+        "toolNumber": 1,
+        "title": "ECOLEX The Gateway to Environmental Law",
+        "languages": [
+            "English",
+            "French",
+            "Spanish"
+        ],
+        "year": 2001,
+        "organization": "IUCN, UNEP, FAO",
+        "chapter": "Policy and Legal Framework",
+        "chapterKey": "policy-legal-framework",
+        "type": "A set of online databases",
+        "purpose": "Providing the most comprehensive possible global source of information on environmental law (including PA related) to increase knowledge of, and build capacity on, environmental law at local, national and global levels.",
+        "structureAndFunction": "Set of online databases of treaties, legislation, court decisions and literature.\n\n• Simple search mode: searchable by terms (with or without full text included)\n• Advanced search mode: complex search menu including thematic, typological and geographical filters, which can be combined with each other\n• Output is a list of documents (each with description, commentary and additional information) from the above categories, many of which hyper-linked to full text\n• Support provided by IUCN Environmental Law Centre",
+        "typicalUse": "Very wide range of applications which require access to existing legal documents, e.g. analysis, development, implementation, evaluation of legal tools to support effective PA systems.",
+        "levelOfApplication": "Usually national system and higher",
+        "skillsAndResourcesRequired": "• Database access free of charge\n• Personal device and internet access required\n• Basic understanding of database search and data retrieval methods\n• Some basic legal and contextual understanding is required to produce meaningful results from the databases",
+        "strengths": [
+            "Wide range of resources covered (largest globally for environmental law)",
+            "Detailed information and full text links for most items",
+            "Relatively easy search function, both in simple and advanced mode",
+            "Operates in three languages",
+            "Availability of support from IUCN Environmental Law Centre",
+            "Website is mobile-responsive"
+        ],
+        "weaknesses": [
+            "Outputs are a mix of various classes of documents which typically require further screening",
+            "No export function for outputs to general or literature database programmes"
+        ],
+        "reference": "IUCN, UNEP and FAO: About Ecolex. Accessed on 11 April 2025.",
+        "versionsAndModifications": "Released in 2001, since then successive updating of online database.",
+        "documentedExperience": "It is likely that most of the uses of this instrument in a development cooperation context have not been documented.",
+        "relatedResources": "• The United Nations Information Portal on Multilateral Environmental Agreements (InforMEA)\n• A more detailed description of ECOLEX is included in: IUCN (2012). IUCN Knowledge Products – The basis for a partnership to support the functions and work programme of IPBES. Gland, Switzerland: IUCN. 72 pp. Accessed on 7 September 2018.",
+        "tags": [
+            "legal",
+            "database",
+            "environmental law",
+            "treaties",
+            "legislation"
+        ],
+        "referenceLinks": [
+            {
+                "label": "IUCN, UNEP and FAO: About Ecolex.",
+                "url": "https://www.ecolex.org/about/",
+                "suffix": "Accessed on 11 April 2025."
+            }
+        ],
+        "relatedResourcesLinks": [
+            {
+                "label": "The United Nations Information Portal on Multilateral Environmental Agreements (InforMEA)",
+                "url": "https://www.informea.org"
+            },
+            {
+                "prefix": "IUCN (2012). IUCN Knowledge Products.",
+                "label": "Accessed on 7 September 2018",
+                "url": "https://portals.iucn.org/library/node/10328"
+            }
+        ]
+    },
+    {
+        "toolNumber": 2,
+        "title": "IUCN Guidelines for Protected Areas Legislation",
+        "languages": [
+            "English",
+            "French",
+            "Spanish"
+        ],
+        "year": 2011,
+        "organization": "IUCN in collaboration with the IUCN Environmental Law Centre",
+        "chapter": "Policy and Legal Framework",
+        "chapterKey": "policy-legal-framework",
+        "type": "Guidelines",
+        "purpose": "Support and guidance to the establishment, further development and implementation of effective national legal frameworks for protected area (PA) systems.",
+        "structureAndFunction": "Guideline document consisting of four parts:\n1. Basic principles and obligations\n2. Governance approaches\n3. Chapter 1: Generic elements of protected areas legislation\n4. Chapter 2: Special issues for marine protected areas\n5. Transboundary protected areas\n\n• Thematic bibliography (structured by 'general and cross-cutting', 'governance', 'marine protected areas' and 'transboundary protected areas')\n• The guideline provides a systematic overview and detailed explanations of all legal, administrative, and policy aspects that should or could be regulated regarding PAs.\n• The document is designed in such a way that individual sections can be consulted in response to specific interest, or for reference on specific themes",
+        "typicalUse": "• Support for reviewing and drafting legislation tailored to meet diverse national and local requirements\n• Stimulation of dialogue between government authorities and other stakeholders to modernize national policy and legal frameworks\n• Implementation of international commitments at the level of national PA law\n• Guidance on legal drafting relevant to PAs\n• Information for those employed in executive agencies that oversee and implement other policies and programmes affecting or affected by PA legislation\n\nAdditional use:\n• Source of information for those involved with or interested in the progress, review or drafting of PA legislation – e.g. concerned or affected communities, organizations, corporations, groups or individuals\n• Source of information for academic audiences interested in the progressive development of protected areas law, such as students, professors or researchers",
+        "levelOfApplication": "Typically national PA systems",
+        "skillsAndResourcesRequired": "A basic to moderate legal understanding is required for meaningful use.",
+        "strengths": [
+            "Comprehensiveness and depth",
+            "Authority and expertise of IUCN Environmental Law Programme and other contributing IUCN bodies, such as WCPA and other IUCN Commission members",
+            "Availability in three languages",
+            "Includes comprehensive consideration of specificities for the marine realm and for transboundary situations"
+        ],
+        "weaknesses": [
+            "Long and complex document which requires some digesting to be applied in new contexts",
+            "No step-by-step guidance on key aspects of PA legislation"
+        ],
+        "reference": "Lausche, B. (2011). Guidelines for Protected Areas Legislation. Gland, Switzerland: IUCN. xxvi + 370 pp. Accessed on 20 January 2025.",
+        "versionsAndModifications": "There was an earlier version of these guidelines by the same author in 1980.",
+        "documentedExperience": "Case studies on legal frameworks of national and sub-national protected areas systems, legal frameworks for special protected area types such as ICCAs or PPAs and Protected Areas Law Matrices are downloadable.",
+        "relatedResources": "• Lausche, B., Farrier, D., Verschuuren, J., La Viña, A. G.M., Trouwborst, A. Born, C-H., Aug, L. (2013). The Legal Aspects of Connectivity Conservation. A Concept Paper, Gland, Switzerland: IUCN.\n• Farrier, D., Harvey, M., Da Silva, S., et al. (2013). The Legal Aspects of Connectivity Conservation – Case Studies, Gland, Switzerland: IUCN. 78 pp.\n• For PA Law Capacity Development Online Modules, see section on training resources.",
+        "tags": [
+            "legal",
+            "guidelines",
+            "legislation",
+            "protected areas",
+            "governance"
+        ],
+        "referenceLinks": [
+            {
+                "label": "Lausche, B. (2011). Guidelines for Protected Areas Legislation. IUCN.",
+                "url": "https://portals.iucn.org/library/node/9752",
+                "suffix": "Accessed on 20 January 2025."
+            }
+        ]
+    },
+    {
+        "toolNumber": 3,
+        "title": "Biodiversity A-Z (Section: Areas)",
+        "languages": [
+            "English"
+        ],
+        "year": 2015,
+        "organization": "UNEP-WCMC",
+        "chapter": "Spatial Planning",
+        "chapterKey": "spatial-planning",
+        "subChapter": "Site Prioritization Methods and Approaches",
+        "type": "Compilation of approaches, methods and tools",
+        "purpose": "Overview over different types of areas of biodiversity importance and protected area categories and designations to support site prioritisation for conservation.",
+        "structureAndFunction": "Alphabetically listed summaries of globally relevant systems to identify, prioritise and protect areas of importance for biodiversity. These fall into two main categories:\n\n1. Protected areas – Sites designated under protected area frameworks, that have legal or other effective protection at the national level. Some have additional recognition through regional or international conventions and agreements (such as UNESCO World Heritage Sites).\n2. Biodiversity designations (such as KBA, EBSA) are developed by governments, academics and NGOs in order to identify areas of biodiversity importance or areas where biodiversity is threatened, as a means to focus attention and resources on their conservation.\n\nEach entry comprises the following:\n• Map of current sites under the given type/designation\n• Description\n• Supported by\n• Year of creation\n• Geographical coverage\n• Criteria for designation\n• Management obligations/requirements\n• Business relevance\n\nDownloadable factsheets, hyperlinks to original documentation and references where appropriate are also provided.",
+        "typicalUse": "• Overview over approaches, methods and tools for site prioritization in the context of conservation planning or PA system development\n• Information of other actors (e.g. private sector) about the location of areas important for biodiversity\n• Entry point for choosing methodologies for systematic conservation and PA system planning",
+        "levelOfApplication": "Typically PA system level",
+        "skillsAndResourcesRequired": "Personal device and internet access.",
+        "strengths": [
+            "Good overview and relatively wide coverage",
+            "Includes many of the important approaches and designations, such as Important Bird Areas (IBA), Important Plant Areas (IPA), Alliance of Zero Extinction (AZE) sites, biodiversity hotspots, etc.",
+            "Comprehensive and consistent documentation of and links to each approach, method or tool documented",
+            "Clear and structured presentation"
+        ],
+        "weaknesses": [
+            "The collection is comprehensive but not complete"
+        ],
+        "reference": "UNEP-WCMC: About Biodiversity a-z. Accessed on 4 March 2025.",
+        "versionsAndModifications": "Released in 2015. Since then successively updated – no distinct versions.",
+        "documentedExperience": "Examples of application of one of the area designation methodologies from the portal, namely Ecologically and Biologically Significant Marine Area (EBSA) are available via PANORAMA – solutions for a healthy planet.",
+        "relatedResources": "Hoyt, E. (2016). Getting SE Kamchatka as an EBSA and candidate IMMA from marine mammal data. PANORAMA – solutions for a healthy planet.",
+        "tags": [
+            "biodiversity",
+            "areas",
+            "site prioritization",
+            "conservation planning",
+            "designations"
+        ],
+        "referenceLinks": [
+            {
+                "label": "UN-Environment-WCMC: About Biodiversity a-z.",
+                "url": "https://www.biodiversitya-z.org/about",
+                "suffix": "Accessed on 4 March 2025."
+            }
+        ],
+        "documentedExperienceLinks": [
+            {
+                "prefix": "Hoyt, E. (2016).",
+                "label": "Getting SE Kamchatka as an EBSA and candidate IMMA from marine mammal data. PANORAMA – solutions for a healthy planet",
+                "url": "https://panorama.solutions/en/solution/getting-se-kamchatka-ebsa-and-candidate-imma-marine-mammal-data",
+                "suffix": "Accessed on 10 September 2018."
+            },
+            {
+                "prefix": "Hoyt, E. (2016).",
+                "label": "Getting notice for a rare blue whale area as an EBSA on road to be an MPA. PANORAMA – solutions for a healthy planet",
+                "url": "https://panorama.solutions/en/solution/getting-notice-rare-blue-whale-area-ebsa-road-be-mpa",
+                "suffix": "Accessed on 10 September 2018."
+            }
+        ]
+    },
+    {
+        "toolNumber": 4,
+        "title": "A Global Standard for the Identification of Key Biodiversity Areas (KBA)",
+        "languages": [
+            "English",
+            "French",
+            "Spanish"
+        ],
+        "year": 2016,
+        "organization": "IUCN",
+        "chapter": "Spatial Planning",
+        "chapterKey": "spatial-planning",
+        "subChapter": "Site Prioritization Methods and Approaches",
+        "type": "Guideline, assessment methodology and global standard",
+        "purpose": "To locate and highlight sites that make significant contributions to the global persistence of biodiversity and, thus, identify high priority areas for conservation action.",
+        "structureAndFunction": "The KBA Standard provides a set of global criteria and thresholds for identifying Key Biodiversity Areas. The standard identifies five criteria:\n\n• Criterion A: Threatened biodiversity\n• Criterion B: Geographically restricted biodiversity\n• Criterion C: Ecological integrity\n• Criterion D: Biological processes\n• Criterion E: Irreplaceability through quantitative analysis\n\nThe standard includes guidance on:\n• Delineating KBA boundaries\n• Documenting and reporting KBAs\n• National and regional processes for identifying KBAs",
+        "typicalUse": "• Systematic identification of priority sites for biodiversity conservation at national, regional, and global scales\n• Informing spatial planning for protected areas and other conservation actions\n• Monitoring progress towards global biodiversity targets\n• Informing environmental impact assessments\n• Guiding investment in conservation",
+        "levelOfApplication": "Site level, national system level",
+        "skillsAndResourcesRequired": "• Knowledge of biodiversity and ecological concepts\n• Access to biodiversity data\n• Ability to apply scientific criteria and thresholds\n• GIS skills for spatial delineation of KBAs",
+        "strengths": [
+            "Global standard provides consistent criteria applicable worldwide",
+            "Peer-reviewed and developed through broad consultation",
+            "Covers all taxonomic groups and ecosystem types",
+            "Clear and transparent criteria and thresholds",
+            "Supported by a global database (World Database of KBAs)"
+        ],
+        "weaknesses": [
+            "Data requirements can be challenging to meet in data-poor regions",
+            "Application requires scientific expertise",
+            "Criteria may not capture all conservation priorities",
+            "Process can be resource-intensive"
+        ],
+        "reference": "IUCN (2016). A Global Standard for the Identification of Key Biodiversity Areas: Version 1.0. Gland, Switzerland: IUCN. xiii + 34 pp.",
+        "versionsAndModifications": "Version 1.0 released in 2016.",
+        "documentedExperience": "KBAs have been identified in most countries globally. The World Database of KBAs documents over 16,000 sites.",
+        "relatedResources": "• World Database of Key Biodiversity Areas\n• IUCN Red List of Threatened Species\n• IUCN Green Status of Species",
+        "tags": [
+            "KBA",
+            "key biodiversity areas",
+            "site prioritization",
+            "conservation",
+            "standard"
+        ],
+        "referenceLinks": [
+            {
+                "label": "IUCN (2016). A Global Standard for the Identification of Key Biodiversity Areas: Version 1.0.",
+                "url": "https://portals.iucn.org/library/node/46259"
+            }
+        ],
+        "relatedResourcesLinks": [
+            {
+                "label": "World Database of Key Biodiversity Areas",
+                "url": "https://www.keybiodiversityareas.org"
+            }
+        ]
+    },
+    {
+        "toolNumber": 5,
+        "title": "Site-level Tool for Identifying Other Effective Area-based Conservation Measures (OECMs)",
+        "languages": [
+            "Arabic",
+            "Chinese",
+            "English",
+            "French",
+            "Indonesian",
+            "Korean",
+            "Portuguese",
+            "Spanish"
+        ],
+        "year": 2023,
+        "organization": "IUCN, IUCN WCPA (Other Effective Area-based Conservation Measures Specialist Group)",
+        "chapter": "Spatial Planning",
+        "chapterKey": "spatial-planning",
+        "subChapter": "Site Prioritization Methods and Approaches",
+        "type": "Assessment tool",
+        "purpose": "Process to determine whether and to which degree a site qualifies as an OECM.",
+        "structureAndFunction": "Assessment tool that provides assessors with a structured way to evaluate the suitability of proposed sites as OECMs according to the CBD definition based on a three-step process (screening, obtaining consent, and conducting the full assessment) and eight criteria:\n\n1. The site is not a protected area\n2. There is a reasonable likelihood that the site supports important biodiversity values\n3. The site is a geographically defined area\n4. The site is confirmed to support important biodiversity values\n5. Institutions or mechanisms exist to govern and manage the site\n6. Governance and management of the site achieve or are expected to achieve the in-situ conservation of important biodiversity values\n7. In situ conservation of important biodiversity values is expected to be for the long term\n8. Governance and management arrangements address equity considerations\n\nThe document contains five main parts:\n• Introduction\n• Step 1: Screening: Identifying a potential OECM\n• Step 2: Consent for full assessment\n• Step 3: The full assessment: Identifying an OECM\n• Assessment summary and next steps",
+        "typicalUse": "• Assessment of a site to determine whether and to which degree it qualifies as an OECM\n• Gap assessment for future improvements for sites that do not qualify",
+        "levelOfApplication": "Site level",
+        "skillsAndResourcesRequired": "• Access to data on the status and designation of protected areas\n• Access to relevant databases to gather information on important biodiversity values\n• Knowledge of governance and management bodies relevant for the site\n• Knowledge of the free, prior, and informed consent (FPIC) process\n• Potentially additional funding if external consultants are required\n• Familiarity with GIS software if site qualifies as an OECM",
+        "strengths": [
+            "Aligned with the Convention on Biological Diversity (CBD)'s definition and criteria for OECMs",
+            "Globally applicable and available in many languages",
+            "Has a clearly structured process for the assessment",
+            "Has simple response options for each criterion with a clear explanation of results",
+            "Promotes equity by requiring FPIC"
+        ],
+        "weaknesses": [
+            "Some of the more complex criteria require further explanation due to ambiguity in some contexts",
+            "Limited explanation of how consent can be obtained in practice",
+            "Limited mention of monitoring the effectiveness of OECMs or financial considerations"
+        ],
+        "reference": "Jonas, H. D., MacKinnon, K., Marnewick, D. and Wood, P. (2023). Site-level tool for identifying other effective area-based conservation measures (OECMs). First edition. IUCN WCPA Technical Report Series No. 6. Gland, Switzerland: IUCN.",
+        "versionsAndModifications": "First edition released in 2023.",
+        "documentedExperience": "Case studies are available in the 'Guidance for other effective area-based conservation measures (OECMs)' publication.",
+        "relatedResources": "• Jonas, H. D., Wood, P., Woodley, S. (2024): Guidance for other effective area-based conservation measures (OECMs). IUCN WCPA Best Practice Protected Area Guidelines Series.\n• Protected Planet (World Database on OECMs [WD-OECM])",
+        "tags": [
+            "OECM",
+            "conservation measures",
+            "assessment",
+            "biodiversity",
+            "CBD"
+        ]
+    },
+    {
+        "toolNumber": 6,
+        "title": "Protected Planet",
+        "languages": [
+            "English"
+        ],
+        "year": 2014,
+        "organization": "UNEP-WCMC, IUCN WCPA",
+        "chapter": "Spatial Planning",
+        "chapterKey": "spatial-planning",
+        "subChapter": "Protected and Conserved Area System Planning, Integrated Gap Analysis, Zoning",
+        "type": "Online portal and database",
+        "purpose": "Informing decision-making and enhancing action on PAs through provision of a comprehensive source of information on protected areas worldwide including georeferenced data and data on their status and trends.",
+        "structureAndFunction": "Protected Planet is an online interface to access the World Database on Protected Areas (WDPA), the World Database on Other Effective Area-Based Conservation Measures (WD-OECM) as well as the Registry for Territories and areas conserved by Indigenous Peoples and local communities (ICCA-Registry).\n\nSupported data query and retrieval formats:\n• PAs accessible via map view or name search (including country statistics search)\n• Free download of WDPA/WDOECM/ICCA Registry geospatial datasets\n• Global and regional Protected Planet Reports, published biennially\n• Statistical reports\n\nSpecific data and information is also offered for thematic areas:\n• Marine PAs\n• Management effectiveness (PAME)\n• Connectivity conservation\n• IUCN Green List of Protected and Conserved Areas\n• Equitable Governance in PAs",
+        "typicalUse": "• Spatial overview and collection of information on PAs and PA systems\n• Download of datasets for in-depth analysis of individual PAs or regions\n• Visualization in the context of PA system planning and connectivity planning\n• Access to statistics and other information on specific PAs and countries\n• Monitoring of global progress towards PA related policy goals (e.g. 30x30, Target 3 of the Global Biodiversity Framework, CBD)\n• Integration into other tools for enhanced landscape monitoring and management",
+        "levelOfApplication": "Individual PAs, PA systems, countries or larger geographical regions (including global)",
+        "skillsAndResourcesRequired": "PC with internet access. Accessing and using the database requires only minimal skills and equipment. However, using some of the output formats supported (e.g. GIS datasets) is only possible with more advanced specialist skills.",
+        "strengths": [
+            "Comprehensiveness and global coverage",
+            "Semi-official character and authority of WDPA",
+            "Allows access to multiple resources of information on many PAs",
+            "Thematic map-view",
+            "Possibility to download geospatial data sets",
+            "Methodology and information about data providers are transparent"
+        ],
+        "weaknesses": [
+            "Reporting PAs is voluntary; therefore, the database is not always complete and up to date",
+            "Sometimes incorrect information is entered – e.g. on overlapping PAs",
+            "Limited search function (no keyword search)",
+            "Some small PAs only represented by point data"
+        ],
+        "reference": "Protected Planet. Cambridge, UK: UN Environment-WCMC. Accessed on 12 November 2024.",
+        "versionsAndModifications": "Various versions of WDPA since the release in 1981, Protected Planet evolving continually since its launch in 2010.",
+        "documentedExperience": "Being a data resource, use of Protected Planet and its databases is usually not documented.",
+        "relatedResources": "• UN Environment-WCMC and IUCN (2024). Protected Planet Report 2024.\n• User Manual for the World Database on Protected Areas version 1.6. UNEP-WCMC: Cambridge, UK.\n• Global Forest Watch\n• DOPA and DOPA explorer",
+        "tags": [
+            "protected planet",
+            "WDPA",
+            "database",
+            "GIS",
+            "spatial data",
+            "PA system"
+        ],
+        "referenceLinks": [
+            {
+                "label": "Protected Planet",
+                "url": "https://www.protectedplanet.net",
+                "suffix": "Accessed on 12 November 2024."
+            }
+        ],
+        "relatedResourcesLinks": [
+            {
+                "label": "Protected Planet Report 2024",
+                "url": "https://www.protectedplanet.net/en/thematic-areas/protected-planet-report"
+            },
+            {
+                "label": "Global Forest Watch",
+                "url": "https://www.globalforestwatch.org"
+            },
+            {
+                "label": "DOPA and DOPA explorer",
+                "url": "https://dopa-explorer.jrc.ec.europa.eu"
+            }
+        ]
+    },
+    {
+        "toolNumber": 7,
+        "title": "Satellite Remote Sensing for Conservation",
+        "languages": [
+            "English"
+        ],
+        "year": 2013,
+        "organization": "WCMC (now UNEP-WCMC)",
+        "chapter": "Spatial Planning",
+        "chapterKey": "spatial-planning",
+        "subChapter": "Protected and Conserved Area System Planning, Integrated Gap Analysis, Zoning",
+        "type": "Guidance document",
+        "purpose": "To inform conservation practitioners about the potential of satellite remote sensing for biodiversity conservation and to guide the use of satellite imagery for protected area management and monitoring.",
+        "structureAndFunction": "Guidance document covering:\n• Introduction to satellite remote sensing and its applications in conservation\n• Overview of freely available satellite data sources and tools\n• Case studies demonstrating application for habitat mapping, change detection, and PA monitoring\n• Guidance on selecting appropriate satellite data and methods\n• Technical guidance on image processing and analysis",
+        "typicalUse": "• Habitat mapping and change detection in and around PAs\n• Monitoring deforestation, land cover change and encroachment\n• Assessing PA effectiveness through land cover analysis\n• Supporting PA system planning through baseline mapping\n• Monitoring illegal activities within PAs",
+        "levelOfApplication": "Site level, national system level, regional",
+        "skillsAndResourcesRequired": "• Computer with internet access\n• Some technical knowledge of GIS and remote sensing\n• Access to satellite data platforms (many freely available)\n• Time for data processing and analysis",
+        "strengths": [
+            "Enables monitoring of large and remote areas",
+            "Many satellite data sources are freely available",
+            "Supports evidence-based conservation management",
+            "Can detect changes over time through time-series analysis",
+            "Wide range of applications across different ecosystems"
+        ],
+        "weaknesses": [
+            "Requires technical skills in GIS and remote sensing",
+            "Cloud cover can limit data availability in tropical regions",
+            "High-resolution imagery can be expensive",
+            "Interpretation can be complex and may require ground-truthing"
+        ],
+        "reference": "Pettorelli, N., Laurance, W.F., O'Brien, T.G., Wegmann, M., Nagendra, H. and Turner, W. (2014). Satellite remote sensing for biodiversity research and conservation applications. Proceedings of the Royal Society B. 281(1780).",
+        "versionsAndModifications": "Guidance has been updated as new satellite platforms and tools have become available.",
+        "documentedExperience": "Remote sensing has been widely used for conservation monitoring globally, with many documented applications.",
+        "relatedResources": "• Global Forest Watch\n• USGS Earth Explorer\n• ESA Copernicus Programme\n• Google Earth Engine",
+        "tags": [
+            "remote sensing",
+            "satellite",
+            "GIS",
+            "monitoring",
+            "land cover",
+            "conservation"
+        ]
+    },
+    {
+        "toolNumber": 8,
+        "title": "Global Forest Watch (GFW)",
+        "languages": [
+            "English",
+            "French",
+            "Spanish",
+            "Portuguese",
+            "Indonesian",
+            "Chinese"
+        ],
+        "year": 2014,
+        "organization": "World Resources Institute (WRI) and partners",
+        "chapter": "Spatial Planning",
+        "chapterKey": "spatial-planning",
+        "subChapter": "Protected and Conserved Area System Planning, Integrated Gap Analysis, Zoning",
+        "type": "Online monitoring platform",
+        "purpose": "Providing near-real-time monitoring of global forests and land use change, with the aim of empowering people to better protect forests.",
+        "structureAndFunction": "Global Forest Watch is an online platform that provides:\n• Near-real-time alerts for forest disturbances (GLAD alerts, RADD alerts)\n• Annual forest loss and gain data globally (Hansen/UMD data)\n• Dashboard for country, regional and site-level analysis\n• API for data integration into other applications\n• Forest Watcher mobile app for field verification\n• Downloadable datasets\n\nKey data layers include:\n• Tree cover loss and gain\n• Forest cover and intact forest landscapes\n• Land cover and land use\n• Protected areas (linked to WDPA)\n• Fires\n• Carbon emissions from deforestation",
+        "typicalUse": "• Monitoring deforestation and forest degradation in and around PAs\n• Generating alerts for potential illegal activities within PAs\n• Evaluating effectiveness of PAs in reducing deforestation\n• Supporting national REDD+ monitoring systems\n• Evidence for advocacy and policy\n• Reporting on biodiversity and forest targets",
+        "levelOfApplication": "Site level, national system level, regional, global",
+        "skillsAndResourcesRequired": "• Computer or smartphone with internet access\n• Registration (free) to access full functionality\n• Basic understanding of mapping and geospatial data is helpful\n• No advanced GIS skills needed for basic use; advanced analysis may require GIS expertise",
+        "strengths": [
+            "Near-real-time monitoring capability",
+            "Freely available and accessible",
+            "Global coverage with regular updates",
+            "User-friendly interface",
+            "Multiple data layers for comprehensive analysis",
+            "Mobile application for field use",
+            "Strong supporting community and documentation"
+        ],
+        "weaknesses": [
+            "Primarily focused on tree cover/forest – limited for non-forest ecosystems",
+            "Alert systems have false positives and require verification",
+            "High-resolution analysis may require additional data",
+            "Connectivity required (limited offline functionality)"
+        ],
+        "reference": "Global Forest Watch. Washington, D.C.: World Resources Institute. Accessed on 11 November 2024.",
+        "versionsAndModifications": "Platform launched in 2014, continuously updated with new data and features.",
+        "documentedExperience": "GFW has been used extensively for PA monitoring, with documented case studies from across Africa, Asia, and Latin America.",
+        "relatedResources": "• Forest Watcher mobile application\n• Protected Planet\n• GLAD Alerts technical documentation\n• REDD+ monitoring guidance",
+        "tags": [
+            "forest watch",
+            "deforestation",
+            "monitoring",
+            "alerts",
+            "GFW",
+            "tree cover"
+        ],
+        "referenceLinks": [
+            {
+                "label": "Global Forest Watch",
+                "url": "https://www.globalforestwatch.org",
+                "suffix": "Accessed on 11 November 2024."
+            }
+        ],
+        "relatedResourcesLinks": [
+            {
+                "label": "Forest Watcher mobile application",
+                "url": "https://forestwatcher.globalforestwatch.org"
+            },
+            {
+                "label": "Protected Planet",
+                "url": "https://www.protectedplanet.net"
+            }
+        ]
+    },
+    {
+        "toolNumber": 9,
+        "title": "Marxan",
+        "languages": [
+            "English"
+        ],
+        "year": 2000,
+        "organization": "University of Queensland (originally); now maintained by Pacific Marine Analysis and Research Association (PacMARA) and partners",
+        "chapter": "Spatial Planning",
+        "chapterKey": "spatial-planning",
+        "subChapter": "Protected and Conserved Area System Planning, Integrated Gap Analysis, Zoning",
+        "type": "Spatial planning software",
+        "purpose": "To identify efficient and effective priority areas for conservation that meet specified biodiversity targets while minimizing costs, as a support tool for systematic conservation planning.",
+        "structureAndFunction": "Marxan is a conservation planning tool that uses simulated annealing (a mathematical optimisation algorithm) to identify sets of planning units that meet user-defined conservation targets at minimum cost. Key features include:\n\n• Input: Planning units (typically a grid), conservation features (species, habitats), cost layer, connectivity\n• Process: Identifies near-optimal solutions balancing representation targets and costs\n• Output: Priority areas for conservation, including the number of times each planning unit is selected across multiple runs (selection frequency)\n\nVariants include:\n• Marxan with Zones: Allows planning for multiple management zones\n• MarxanConnect: Incorporates connectivity into planning\n• Marxan Cloud: Web-based version",
+        "typicalUse": "• Systematic conservation planning at various scales\n• Identifying priority areas for new PAs or expanding existing PA systems\n• Gap analysis for PA systems\n• Marine spatial planning and MPA design\n• Prioritization of areas for restoration",
+        "levelOfApplication": "Site level, national system level, regional",
+        "skillsAndResourcesRequired": "• Computer with Marxan software installed (freely downloadable)\n• Biodiversity and cost data for the planning region\n• GIS skills to prepare input data and interpret outputs\n• Understanding of systematic conservation planning principles\n• Time for data preparation and analysis (can be considerable)",
+        "strengths": [
+            "Widely used and tested globally",
+            "Flexible and applicable to diverse contexts and ecosystems",
+            "Explicitly addresses trade-offs between biodiversity representation and costs",
+            "Supported by a large user community and extensive documentation",
+            "Freely available software",
+            "Can incorporate connectivity"
+        ],
+        "weaknesses": [
+            "Requires significant data preparation and GIS skills",
+            "Outputs are sensitive to input assumptions and data quality",
+            "Understanding and communicating outputs to non-specialists can be challenging",
+            "Does not automatically address socio-economic and governance considerations"
+        ],
+        "reference": "Ball, I.R., Possingham, H.P. and Watts, M. (2009). Marxan and relatives: Software for spatial conservation prioritisation. In A. Moilanen, K.A. Wilson and H.P. Possingham (eds.), Spatial conservation prioritisation: Quantitative methods and computational tools.",
+        "versionsAndModifications": "Marxan v1.0 released in 2000. Multiple updates since, including Marxan with Zones. Marxan Cloud launched more recently.",
+        "documentedExperience": "Marxan has been used in hundreds of published conservation planning studies worldwide and in numerous national PA system planning processes.",
+        "relatedResources": "• Marxan website and user community\n• Systematic Conservation Planning literature\n• Zonation (alternative prioritization tool)\n• Protected Planet",
+        "tags": [
+            "Marxan",
+            "systematic conservation planning",
+            "spatial planning",
+            "prioritization",
+            "MPA",
+            "software"
+        ]
+    },
+    {
+        "toolNumber": 10,
+        "title": "Zonation",
+        "languages": [
+            "English"
+        ],
+        "year": 2004,
+        "organization": "University of Helsinki, Finnish Environment Institute (SYKE)",
+        "chapter": "Spatial Planning",
+        "chapterKey": "spatial-planning",
+        "subChapter": "Protected and Conserved Area System Planning, Integrated Gap Analysis, Zoning",
+        "type": "Spatial planning software",
+        "purpose": "To produce a hierarchical spatial prioritization of the landscape for biodiversity conservation, identifying areas of high conservation value that can support various conservation planning decisions.",
+        "structureAndFunction": "Zonation uses a cell removal algorithm to rank all planning units from lowest to highest conservation value, producing a continuous priority map. Key features:\n\n• Input: Distribution data for biodiversity features (species, habitats), costs, connectivity\n• Process: Iteratively removes cells of lowest conservation value, maintaining core areas\n• Output: Continuous priority map showing relative conservation value of the entire landscape\n\nKey analytical features:\n• Complementarity-based prioritization\n• Multiple biodiversity feature weighting\n• Connectivity and landscape structure consideration\n• Condition layers\n• Administrative layers for zoning",
+        "typicalUse": "• Systematic prioritization of areas for conservation action\n• PA system gap analysis and expansion planning\n• Landscape-level conservation planning\n• Identifying areas for restoration\n• Informing spatial planning and land-use decisions",
+        "levelOfApplication": "Site level, national system level, regional",
+        "skillsAndResourcesRequired": "• Computer with Zonation software (freely downloadable)\n• Species distribution or habitat data\n• GIS skills for data preparation and output interpretation\n• Understanding of conservation planning principles\n• Time for data preparation and analysis",
+        "strengths": [
+            "Produces a continuous priority map useful for planning decisions",
+            "Well-documented and widely used in peer-reviewed conservation planning",
+            "Flexible – applicable to any scale and ecosystem",
+            "Freely available",
+            "Can incorporate biodiversity condition and connectivity",
+            "Active development and user community"
+        ],
+        "weaknesses": [
+            "Requires species distribution data which may be difficult to obtain",
+            "Technical skills in GIS and data analysis needed",
+            "Outputs require careful interpretation",
+            "Less widely used in operational planning than Marxan in some regions"
+        ],
+        "reference": "Moilanen, A., Wilson, K.A. and Possingham, H.P. (eds.) (2009). Spatial Conservation Prioritisation: Quantitative Methods and Computational Tools. Oxford University Press.",
+        "versionsAndModifications": "Zonation v1 released in 2004. Current version is Zonation 5, released in 2021.",
+        "documentedExperience": "Zonation has been used in numerous national and regional conservation planning studies, particularly in Europe, Africa, and Asia-Pacific.",
+        "relatedResources": "• Zonation website and documentation\n• Marxan (alternative prioritization tool)\n• GBIF (Global Biodiversity Information Facility) for species data\n• Protected Planet",
+        "tags": [
+            "Zonation",
+            "spatial planning",
+            "prioritization",
+            "landscape",
+            "biodiversity",
+            "software"
+        ]
+    }
+]
