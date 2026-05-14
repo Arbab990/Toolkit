@@ -21,9 +21,9 @@ const navItems = [
   { label: 'Settings', icon: Settings, path: '/settings' },
 ];
 
-export default function Sidebar() {
+export default function Sidebar({ isOpen }) {
   return (
-    <aside className="sidebar" id="sidebar">
+    <aside className={`sidebar ${isOpen ? 'sidebar--open' : ''}`} id="sidebar">
       {/* Brand */}
       <div className="sidebar__brand">
         <div className="sidebar__logo">

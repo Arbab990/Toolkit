@@ -1,27 +1,35 @@
+import { Link } from 'react-router-dom';
+
 export default function SiteCard({ site }) {
   const {
+    _id,
     name,
     category,
     country,
-    image,
+    images,
     lastAssessment,
     progress,
   } = site;
 
+  // Use first uploaded image or fallback to placeholder
+  const imageSrc = images && images.length > 0 ? images[0] : '/images/green-valley.png';
+
   return (
-    <div className="site-card" id={`site-card-${name.toLowerCase().replace(/\s+/g, '-')}`}>
+    <Link to={`/sites/${_id}`} className="site-card" id={`site-card-${name.toLowerCase().replace(/\s+/g, '-')}`}>
       <div className="site-card__image-wrapper">
         <img
           className="site-card__image"
-          src={image}
+          src={imageSrc}
           alt={`${name} - ${category}`}
           loading="lazy"
         />
       </div>
       <div className="site-card__body">
-        <h3 className="site-card__name">{name}</h3>
-        <p className="site-card__category">{category}</p>
-        <p className="site-card__country">{country}</p>
+        <div className="site-card__main">
+          <h3 className="site-card__name">{name}</h3>
+          <p className="site-card__category">{category}</p>
+          <p className="site-card__country">{country}</p>
+        </div>
 
         <div className="site-card__footer">
           <span className="site-card__assessment">
@@ -39,6 +47,6 @@ export default function SiteCard({ site }) {
           <span className="progress-bar__label">{progress}%</span>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }

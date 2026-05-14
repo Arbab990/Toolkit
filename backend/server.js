@@ -23,6 +23,11 @@ app.use(
 
 // Route mounts
 app.use('/api/auth', require('./routes/authRoutes'));
+app.use('/api/sites', require('./routes/siteRoutes'));
+app.use('/api/assessments', require('./routes/assessmentRoutes'));
+
+// Serve static files
+app.use('/uploads', express.static('uploads'));
 
 // Health check
 app.get('/api/health', (req, res) => {
