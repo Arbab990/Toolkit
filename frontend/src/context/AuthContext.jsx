@@ -10,6 +10,19 @@ export function AuthProvider({ children }) {
 
   // Check auth status on mount
   const checkAuth = useCallback(async () => {
+    // TEMPORARY BYPASS FOR CLIENT PREVIEW (Vercel/Deployment)
+    if (import.meta.env.VITE_AUTH_BYPASS === 'true') {
+      setUser({ 
+        _id: 'preview-user', 
+        fullName: 'Client Preview', 
+        email: 'preview@heritage.com',
+        role: 'admin' 
+      });
+      setIsAuthenticated(true);
+      setLoading(false);
+      return;
+    }
+
     try {
       setLoading(true);
       const data = await getCurrentUser();
@@ -30,6 +43,19 @@ export function AuthProvider({ children }) {
   }, [checkAuth]);
 
   const login = async (email, password) => {
+    // TEMPORARY BYPASS FOR CLIENT PREVIEW
+    if (import.meta.env.VITE_AUTH_BYPASS === 'true') {
+      const dummyUser = { 
+        _id: 'preview-user', 
+        fullName: 'Client Preview', 
+        email: 'preview@heritage.com',
+        role: 'admin' 
+      };
+      setUser(dummyUser);
+      setIsAuthenticated(true);
+      return { success: true, user: dummyUser };
+    }
+
     const data = await loginUser(email, password);
     if (data.success) {
       setUser(data.user);
