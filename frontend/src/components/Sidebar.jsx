@@ -16,8 +16,6 @@ const navItems = [
   { label: 'Sites', icon: MapPin, path: '/' },
   { label: 'Assessments', icon: ClipboardCheck, path: '/assessments' },
   { label: 'Reports', icon: FileBarChart, path: '/reports' },
-  { label: 'Actions', icon: Zap, path: '/actions' },
-  { label: 'Library', icon: BookOpen, path: '/library' },
   { label: 'Settings', icon: Settings, path: '/settings' },
 ];
 

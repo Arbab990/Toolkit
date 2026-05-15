@@ -85,3 +85,6 @@ Thumbs.db
 # Vite build output
 dist/
 frontend/dist/
+
+# Rollback Documentation
+README-BYPASS.md

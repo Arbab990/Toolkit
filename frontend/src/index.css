@@ -544,7 +544,7 @@ img {
 
 .status-badge:hover {
   transform: scale(1.05);
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .status-badge--in-progress {
@@ -928,12 +928,12 @@ img {
   background-color: var(--color-card);
 }
 
-.auth-checkbox input:checked + .auth-checkbox__mark {
+.auth-checkbox input:checked+.auth-checkbox__mark {
   background-color: var(--color-primary-600);
   border-color: var(--color-primary-600);
 }
 
-.auth-checkbox input:checked + .auth-checkbox__mark::after {
+.auth-checkbox input:checked+.auth-checkbox__mark::after {
   content: '';
   display: block;
   width: 5px;
@@ -1530,7 +1530,7 @@ img {
   table-layout: fixed;
 }
 
-.worksheet-table th, 
+.worksheet-table th,
 .worksheet-table td {
   border: 1px solid #ced4da;
   padding: 0;
@@ -2305,23 +2305,46 @@ button:active {
 }
 
 /* Rating Specific Colors */
-.rating-dot.good { background-color: #22c55e; }
-.rating-label.good { color: #166534; }
-
-.rating-dot.concerns { background-color: #a3e635; }
-.rating-label.concerns { color: #3f6212; }
-
-.rating-dot.significant { background-color: #f97316; }
-.rating-label.significant { color: #9a3412; }
-
-.rating-dot.critical { background-color: #ef4444; }
-.rating-label.critical { color: #991b1b; }
-
-.rating-dot.deficient { 
-  background-color: transparent; 
-  border-color: #94a3b8; 
+.rating-dot.good {
+  background-color: #22c55e;
 }
-.rating-label.deficient { color: #475569; }
+
+.rating-label.good {
+  color: #166534;
+}
+
+.rating-dot.concerns {
+  background-color: #a3e635;
+}
+
+.rating-label.concerns {
+  color: #3f6212;
+}
+
+.rating-dot.significant {
+  background-color: #f97316;
+}
+
+.rating-label.significant {
+  color: #9a3412;
+}
+
+.rating-dot.critical {
+  background-color: #ef4444;
+}
+
+.rating-label.critical {
+  color: #991b1b;
+}
+
+.rating-dot.deficient {
+  background-color: transparent;
+  border-color: #94a3b8;
+}
+
+.rating-label.deficient {
+  color: #475569;
+}
 
 .rating-option.selected .rating-dot {
   box-shadow: 0 0 0 3px var(--color-primary-100);
@@ -2370,8 +2393,13 @@ button:active {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -2402,7 +2430,8 @@ button:active {
   }
 
   .main-content {
-    padding: 64px 16px 24px; /* Space for mobile toggle */
+    padding: 64px 16px 24px;
+    /* Space for mobile toggle */
     height: 100vh;
   }
 
@@ -2423,11 +2452,13 @@ button:active {
 
   /* Table responsiveness */
   .sites-table-wrapper {
-    overflow-x: visible; /* Switching to card layout, so no scroll needed */
+    overflow-x: visible;
+    /* Switching to card layout, so no scroll needed */
   }
 
   .sites-table thead {
-    display: none; /* Hide traditional headers */
+    display: none;
+    /* Hide traditional headers */
   }
 
   .sites-table tbody tr {
@@ -2542,7 +2573,7 @@ button:active {
   .form-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .form-section.col-span-2 {
     grid-column: span 1;
   }
@@ -2552,14 +2583,397 @@ button:active {
   .location-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .form-actions-inline {
     flex-direction: column;
     gap: 12px;
   }
-  
+
   .form-actions-inline button,
   .form-actions-inline .btn-submit {
     width: 100%;
   }
+}
+
+/* ============================================
+   Structured Tool Table Styles (Tool 2)
+   ============================================ */
+
+.table-responsive {
+  overflow-x: auto;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  margin-bottom: 32px;
+}
+
+.structured-tool-table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  min-width: 1200px;
+  background-color: white;
+  font-size: 12px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+/* All th/td base */
+.structured-tool-table th,
+.structured-tool-table td {
+  border-bottom: 1px solid #c8d5c8;
+  border-right: 1px solid #c8d5c8;
+  padding: 0;
+  vertical-align: middle;
+}
+
+/* Add left border to the first column */
+.structured-tool-table th:first-child,
+.structured-tool-table td:first-child {
+  border-left: 1px solid #c8d5c8;
+}
+
+/* Add top border to the first row cells */
+.main-header-row th {
+  border-top: 1px solid #c8d5c8;
+}
+
+/* ---- HEADER ROWS ---- */
+
+/* Top row: solid dark green band */
+.main-header-row th {
+  background-color: #2d6a4f;
+  color: white;
+  padding: 8px 4px;
+  font-size: 11px;
+  font-weight: 600;
+  text-align: center;
+  border-color: rgba(255, 255, 255, 0.15);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Corner rounding for the very first and last th */
+.main-header-row th:first-child {
+  border-top-left-radius: var(--radius-lg);
+}
+
+.main-header-row th:last-child {
+  border-top-right-radius: var(--radius-lg);
+}
+
+/* Group header spans (Impact / Management) sit on same row */
+.main-header-row th.group-span {
+  font-size: 12px;
+}
+
+/* th-content: icon + label stacked */
+.th-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 4px 2px;
+  min-height: 50px;
+}
+
+.th-content span {
+  line-height: 1.1;
+  text-align: center;
+  display: block;
+  max-width: 100%;
+}
+
+/* Sub-header row: Very light grey/green background for grouped categories */
+.sub-header-row th {
+  background-color: #f1f5f2;
+  color: #3a5a40;
+  padding: 10px 8px;
+  font-size: 11px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1.2;
+  border-color: #c8d5c8;
+}
+
+.sub-header-row th:hover {
+  background-color: #e8f0e9;
+}
+
+/* ---- DATA ROWS ---- */
+
+.structured-tool-table tbody tr {
+  background-color: #ffffff;
+}
+
+.structured-tool-table tbody tr:hover {
+  background-color: #f0f7f2;
+}
+
+.structured-tool-table td {
+  padding: 8px 10px;
+  border-color: #d4dfd4;
+  vertical-align: middle;
+}
+
+/* No. / row number column */
+.no-col {
+  width: 38px;
+  min-width: 38px;
+  max-width: 38px;
+}
+
+.action-col {
+  width: 40px;
+  min-width: 40px;
+  max-width: 40px;
+}
+
+.row-no, .delete-row-cell {
+  text-align: center;
+  font-weight: 700;
+  color: var(--color-neutral-500);
+  background-color: #f8faf8;
+  width: 38px;
+  min-width: 38px;
+  max-width: 38px;
+  padding: 0;
+}
+
+.delete-row-cell {
+  width: 40px;
+  min-width: 40px;
+  max-width: 40px;
+  background-color: transparent;
+}
+
+.row-action-btn {
+  background: transparent;
+  border: none;
+  padding: 6px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: #94a3b8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.row-action-btn.delete:hover {
+  background-color: #fee2e2;
+  color: #ef4444;
+}
+
+.numbered-circle {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1.5px solid #2d6a4f;
+  color: #2d6a4f;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+/* ---- INSTRUCTIONAL / EXAMPLE ROW ---- */
+
+.example-row td {
+  background-color: #ebf5eb;
+  color: #4b5563;
+  font-size: 11px;
+  border-bottom: 2px solid #000 !important;
+  text-align: center;
+}
+
+.example-row .row-no {
+  background-color: #ebf5eb;
+  border-bottom: 2px solid #000 !important;
+}
+
+.example-text {
+  line-height: 1.4;
+  padding: 8px 10px;
+}
+
+/* Badges & Capsules */
+.badge-pos,
+.badge-success {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.badge-neg,
+.badge-danger {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.badge-pot,
+.badge-warning {
+  background: #fef9c3;
+  color: #854d0e;
+}
+
+.badge-high {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.badge-med {
+  background: #fef9c3;
+  color: #854d0e;
+}
+
+.badge-low {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.capsule-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 11px;
+  white-space: nowrap;
+  text-align: center;
+  min-width: 80px;
+}
+
+/* Dynamic Table Select Styling */
+.table-select-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.table-select.as-capsule {
+  padding: 4px 22px 4px 8px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 11px;
+  text-align: center;
+  border: none;
+  width: 100%;
+  max-width: 110px;
+  cursor: pointer;
+  background-position: right 6px center;
+}
+
+.table-select.as-capsule:hover {
+  filter: brightness(0.95);
+}
+
+.table-select.val-positive,
+.table-select.val-high-green,
+.table-select.val-low-green {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.table-select.val-negative,
+.table-select.val-high-red,
+.table-select.val-low-red {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.table-select.val-potential,
+.table-select.val-current,
+.table-select.val-medium {
+  background-color: #fef9c3;
+  color: #854d0e;
+}
+
+.table-select.val-origin {
+  background-color: #f1f5f9;
+  color: #475569;
+}
+
+/* ---- INPUTS ---- */
+
+.table-textarea {
+  width: 100%;
+  min-height: 60px;
+  border: 1px solid var(--color-neutral-200);
+  border-radius: 6px;
+  padding: 3px 5px;
+  font-size: 12px;
+  font-family: inherit;
+  resize: vertical;
+  background-color: #fff;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  box-sizing: border-box;
+  display: block;
+}
+
+/* Minimize whitespace around text boxes to maximize input area */
+.structured-tool-table td:has(.table-textarea) {
+  padding: 3px 4px !important;
+}
+
+.table-textarea:focus {
+  border-color: #2d6a4f;
+  box-shadow: 0 0 0 2px rgba(45, 106, 79, 0.15);
+  outline: none;
+}
+
+.table-select {
+  width: 100%;
+  padding: 7px 28px 7px 10px;
+  border: 1px solid var(--color-neutral-200);
+  border-radius: 6px;
+  font-size: 12px;
+  font-family: inherit;
+  background-color: white;
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  background-size: 14px;
+  cursor: pointer;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.table-select:focus {
+  border-color: #2d6a4f;
+  box-shadow: 0 0 0 2px rgba(45, 106, 79, 0.15);
+  outline: none;
+}
+
+/* ---- ADD ROW FOOTER ---- */
+
+.add-row-container td {
+  padding: 12px 16px;
+  background-color: #f5f9f6;
+  text-align: center;
+  border-top: 2px solid #d4dfd4;
+}
+
+.add-row-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 18px;
+  background-color: white;
+  border: 1.5px dashed #2d6a4f;
+  border-radius: 8px;
+  color: #2d6a4f;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.add-row-btn:hover {
+  background-color: #e8f5ee;
+  border-style: solid;
 }
