@@ -1,7 +1,7 @@
 import { Fragment, useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowLeft, Save, ArrowRight, Check, Pencil } from 'lucide-react';
+import { ArrowLeft, Save, ArrowRight, Check, Pencil, ChevronDown } from 'lucide-react';
 import { getAssessment, saveAssessment } from '../services/assessmentService';
 import { getSite } from '../services/siteService';
 import { useToast } from '../context/ToastContext';
@@ -52,6 +52,10 @@ const createRows = () =>
   );
 
 const worldHeritageCount = sections[0].questions.length;
+const bufferZoneStart = worldHeritageCount;
+const bufferZoneCount = sections[1].questions.length;
+const widerSettingStart = bufferZoneStart + bufferZoneCount;
+const widerSettingCount = sections[2].questions.length;
 
 const normalizeRows = (rows = createRows()) =>
   createRows().map((baseRow, index) => {
@@ -72,7 +76,9 @@ export default function Tool3Page() {
   const [saving, setSaving] = useState(false);
   const [site, setSite] = useState(null);
   const [editingIndex, setEditingIndex] = useState(null);
+  const [openPicker, setOpenPicker] = useState(null);
   const [draftRow, setDraftRow] = useState({
+    section: '',
     questionIndex: '',
     response: '',
     recommendations: '',
@@ -121,6 +127,11 @@ export default function Tool3Page() {
     setFormData((prev) => ({ ...prev, [field]: value }));
   };
 
+  const selectDraftQuestion = (section, index) => {
+    setDraftRow((prev) => ({ ...prev, section, questionIndex: String(index) }));
+    setOpenPicker(null);
+  };
+
   const saveData = async (nextData, isCompleted = false) => {
     await saveAssessment({
       siteId,
@@ -144,7 +155,7 @@ export default function Tool3Page() {
       await saveData(nextData);
       setFormData(nextData);
       setEditingIndex(null);
-      setDraftRow({ questionIndex: '', response: '', recommendations: '' });
+      setDraftRow({ section: '', questionIndex: '', response: '', recommendations: '' });
       toast.success('Row saved successfully');
     } catch (err) {
       toast.error('Failed to save row');
@@ -176,6 +187,55 @@ export default function Tool3Page() {
   const availableWorldRows = worldRows
     .map((row, index) => ({ ...row, index }))
     .filter((row) => !row.saved);
+  const bufferRows = formData.rows.slice(bufferZoneStart, widerSettingStart);
+  const savedBufferRows = bufferRows
+    .map((row, index) => ({ ...row, index: bufferZoneStart + index }))
+    .filter((row) => row.saved);
+  const availableBufferRows = bufferRows
+    .map((row, index) => ({ ...row, index: bufferZoneStart + index }))
+    .filter((row) => !row.saved);
+  const widerRows = formData.rows.slice(widerSettingStart, widerSettingStart + widerSettingCount);
+  const savedWiderRows = widerRows
+    .map((row, index) => ({ ...row, index: widerSettingStart + index }))
+    .filter((row) => row.saved);
+  const availableWiderRows = widerRows
+    .map((row, index) => ({ ...row, index: widerSettingStart + index }))
+    .filter((row) => !row.saved);
+
+  const renderQuestionPicker = (sectionKey, label, rows) => {
+    const selected =
+      draftRow.section === sectionKey
+        ? rows.find((row) => String(row.index) === String(draftRow.questionIndex))
+        : null;
+
+    return (
+      <div className="tool-3-question-picker">
+        <button
+          type="button"
+          className="tool-3-question-picker__button"
+          onClick={() => setOpenPicker(openPicker === sectionKey ? null : sectionKey)}
+        >
+          <span>{selected ? `${selected.index + 1}. ${selected.question}` : label}</span>
+          <ChevronDown size={16} />
+        </button>
+        {openPicker === sectionKey && (
+          <div className="tool-3-question-picker__menu">
+            {rows.map((row) => (
+              <button
+                key={row.index}
+                type="button"
+                className="tool-3-question-picker__option"
+                onClick={() => selectDraftQuestion(sectionKey, row.index)}
+              >
+                <strong>{row.index + 1}.</strong>
+                <span>{row.question}</span>
+              </button>
+            ))}
+          </div>
+        )}
+      </div>
+    );
+  };
 
   return (
     <motion.div className="tool-page tool-3-page" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
@@ -193,6 +253,12 @@ export default function Tool3Page() {
       <div className="excel-worksheet" style={{ borderColor: 'white' }}>
         <div className="table-responsive">
           <table className="worksheet-table structured-tool-table tool-3-table">
+            <colgroup>
+              <col />
+              <col />
+              <col />
+              <col className="tool-3-actions-col" />
+            </colgroup>
             <thead>
               <tr className="worksheet-title-row">
                 <th colSpan="4">Worksheet 3. Assessment of boundaries, buffer zones and the wider setting</th>
@@ -201,7 +267,7 @@ export default function Tool3Page() {
                 <th>Question</th>
                 <th>Response/Explanation</th>
                 <th>Recommendations</th>
-                <th>Actions</th>
+                <th className="tool-3-actions-header"></th>
               </tr>
             </thead>
             <tbody>
@@ -259,36 +325,27 @@ export default function Tool3Page() {
                       {availableWorldRows.length > 0 && (
                         <tr className="tool-3-question-row">
                           <td className="tool-3-question">
-                            <select
-                              className="tool-3-question-select"
-                              value={draftRow.questionIndex}
-                              onChange={(e) =>
-                                setDraftRow((prev) => ({ ...prev, questionIndex: e.target.value }))
-                              }
-                            >
-                              <option value="">Select property question</option>
-                              {availableWorldRows.map((row) => (
-                                <option key={row.index} value={row.index}>
-                                  {row.index + 1}. {row.question}
-                                </option>
-                              ))}
-                            </select>
+                            {renderQuestionPicker('world', 'Select property question', availableWorldRows)}
                           </td>
                           <td>
                             <textarea
                               className="table-textarea"
-                              value={draftRow.response}
+                              value={draftRow.section === 'world' ? draftRow.response : ''}
                               onChange={(e) =>
-                                setDraftRow((prev) => ({ ...prev, response: e.target.value }))
+                                setDraftRow((prev) => ({ ...prev, section: 'world', response: e.target.value }))
                               }
                             />
                           </td>
                           <td>
                             <textarea
                               className="table-textarea"
-                              value={draftRow.recommendations}
+                              value={draftRow.section === 'world' ? draftRow.recommendations : ''}
                               onChange={(e) =>
-                                setDraftRow((prev) => ({ ...prev, recommendations: e.target.value }))
+                                setDraftRow((prev) => ({
+                                  ...prev,
+                                  section: 'world',
+                                  recommendations: e.target.value,
+                                }))
                               }
                             />
                           </td>
@@ -301,7 +358,189 @@ export default function Tool3Page() {
                                   recommendations: draftRow.recommendations,
                                 })
                               }
-                              disabled={saving || draftRow.questionIndex === ''}
+                              disabled={saving || draftRow.section !== 'world' || draftRow.questionIndex === ''}
+                              title="Save row"
+                            >
+                              <Check size={18} />
+                            </button>
+                          </td>
+                        </tr>
+                      )}
+                    </>
+                  ) : section.title === 'Buffer zone (if applicable)' ? (
+                    <>
+                      {savedBufferRows.map((row) => (
+                        <tr key={row.question} className="tool-3-question-row">
+                          <td className="tool-3-question">
+                            <strong>{row.index + 1}.</strong> {row.question}
+                          </td>
+                          <td>
+                            <textarea
+                              className="table-textarea"
+                              value={row.response || ''}
+                              disabled={editingIndex !== row.index}
+                              onChange={(e) => handleRowChange(row.index, 'response', e.target.value)}
+                            />
+                          </td>
+                          <td>
+                            <textarea
+                              className="table-textarea"
+                              value={row.recommendations || ''}
+                              disabled={editingIndex !== row.index}
+                              onChange={(e) => handleRowChange(row.index, 'recommendations', e.target.value)}
+                            />
+                          </td>
+                          <td className="tool-3-actions-cell">
+                            {editingIndex === row.index ? (
+                              <button
+                                className="row-action-btn save"
+                                onClick={() => saveWorldHeritageRow(row.index, formData.rows[row.index])}
+                                disabled={saving}
+                                title="Save row"
+                              >
+                                <Check size={18} />
+                              </button>
+                            ) : (
+                              <button
+                                className="row-action-btn edit"
+                                onClick={() => setEditingIndex(row.index)}
+                                title="Edit row"
+                              >
+                                <Pencil size={18} />
+                              </button>
+                            )}
+                          </td>
+                        </tr>
+                      ))}
+
+                      {availableBufferRows.length > 0 && (
+                        <tr className="tool-3-question-row">
+                          <td className="tool-3-question">
+                            {renderQuestionPicker('buffer', 'Select buffer zone question', availableBufferRows)}
+                          </td>
+                          <td>
+                            <textarea
+                              className="table-textarea"
+                              value={draftRow.section === 'buffer' ? draftRow.response : ''}
+                              onChange={(e) =>
+                                setDraftRow((prev) => ({ ...prev, section: 'buffer', response: e.target.value }))
+                              }
+                            />
+                          </td>
+                          <td>
+                            <textarea
+                              className="table-textarea"
+                              value={draftRow.section === 'buffer' ? draftRow.recommendations : ''}
+                              onChange={(e) =>
+                                setDraftRow((prev) => ({
+                                  ...prev,
+                                  section: 'buffer',
+                                  recommendations: e.target.value,
+                                }))
+                              }
+                            />
+                          </td>
+                          <td className="tool-3-actions-cell">
+                            <button
+                              className="row-action-btn save"
+                              onClick={() =>
+                                saveWorldHeritageRow(Number(draftRow.questionIndex), {
+                                  response: draftRow.response,
+                                  recommendations: draftRow.recommendations,
+                                })
+                              }
+                              disabled={saving || draftRow.section !== 'buffer' || draftRow.questionIndex === ''}
+                              title="Save row"
+                            >
+                              <Check size={18} />
+                            </button>
+                          </td>
+                        </tr>
+                      )}
+                    </>
+                  ) : section.title === 'Interactions with the wider setting' ? (
+                    <>
+                      {savedWiderRows.map((row) => (
+                        <tr key={row.question} className="tool-3-question-row">
+                          <td className="tool-3-question">
+                            <strong>{row.index + 1}.</strong> {row.question}
+                          </td>
+                          <td>
+                            <textarea
+                              className="table-textarea"
+                              value={row.response || ''}
+                              disabled={editingIndex !== row.index}
+                              onChange={(e) => handleRowChange(row.index, 'response', e.target.value)}
+                            />
+                          </td>
+                          <td>
+                            <textarea
+                              className="table-textarea"
+                              value={row.recommendations || ''}
+                              disabled={editingIndex !== row.index}
+                              onChange={(e) => handleRowChange(row.index, 'recommendations', e.target.value)}
+                            />
+                          </td>
+                          <td className="tool-3-actions-cell">
+                            {editingIndex === row.index ? (
+                              <button
+                                className="row-action-btn save"
+                                onClick={() => saveWorldHeritageRow(row.index, formData.rows[row.index])}
+                                disabled={saving}
+                                title="Save row"
+                              >
+                                <Check size={18} />
+                              </button>
+                            ) : (
+                              <button
+                                className="row-action-btn edit"
+                                onClick={() => setEditingIndex(row.index)}
+                                title="Edit row"
+                              >
+                                <Pencil size={18} />
+                              </button>
+                            )}
+                          </td>
+                        </tr>
+                      ))}
+
+                      {availableWiderRows.length > 0 && (
+                        <tr className="tool-3-question-row">
+                          <td className="tool-3-question">
+                            {renderQuestionPicker('wider', 'Select wider setting question', availableWiderRows)}
+                          </td>
+                          <td>
+                            <textarea
+                              className="table-textarea"
+                              value={draftRow.section === 'wider' ? draftRow.response : ''}
+                              onChange={(e) =>
+                                setDraftRow((prev) => ({ ...prev, section: 'wider', response: e.target.value }))
+                              }
+                            />
+                          </td>
+                          <td>
+                            <textarea
+                              className="table-textarea"
+                              value={draftRow.section === 'wider' ? draftRow.recommendations : ''}
+                              onChange={(e) =>
+                                setDraftRow((prev) => ({
+                                  ...prev,
+                                  section: 'wider',
+                                  recommendations: e.target.value,
+                                }))
+                              }
+                            />
+                          </td>
+                          <td className="tool-3-actions-cell">
+                            <button
+                              className="row-action-btn save"
+                              onClick={() =>
+                                saveWorldHeritageRow(Number(draftRow.questionIndex), {
+                                  response: draftRow.response,
+                                  recommendations: draftRow.recommendations,
+                                })
+                              }
+                              disabled={saving || draftRow.section !== 'wider' || draftRow.questionIndex === ''}
                               title="Save row"
                             >
                               <Check size={18} />
@@ -311,7 +550,7 @@ export default function Tool3Page() {
                       )}
                     </>
                   ) : section.questions.map((question) => {
-                    const currentIndex = rowIndex;
+                    const currentIndex = rowIndex + bufferZoneCount;
                     rowIndex += 1;
                     const row = formData.rows[currentIndex] || {};
                     return (
