@@ -1971,6 +1971,51 @@ button:active {
   max-width: 800px;
 }
 
+.coming-soon-card {
+  max-width: 560px;
+  min-height: 260px;
+  background-color: var(--color-card);
+  border: 1px solid var(--color-neutral-100);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  text-align: center;
+  padding: 40px 32px;
+}
+
+.coming-soon-card__icon {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-md);
+  background-color: var(--color-primary-50);
+  color: var(--color-primary-600);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.coming-soon-card__icon svg {
+  width: 28px;
+  height: 28px;
+}
+
+.coming-soon-card h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-neutral-900);
+  margin: 0;
+}
+
+.coming-soon-card p {
+  font-size: 16px;
+  color: var(--color-neutral-500);
+  margin: 0;
+}
+
 .settings-group {
   display: flex;
   flex-direction: column;
@@ -2600,10 +2645,13 @@ button:active {
    ============================================ */
 
 .table-responsive {
+  overflow: hidden;
   overflow-x: auto;
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-md);
   margin-bottom: 32px;
+  background-color: white;
+  border: 1px solid #d4dfd4;
 }
 
 .structured-tool-table {
@@ -2611,17 +2659,15 @@ button:active {
   border-spacing: 0;
   width: 100%;
   min-width: 1200px;
-  background-color: white;
+  background-color: transparent;
   font-size: 12px;
-  border-radius: var(--radius-lg);
-  overflow: hidden;
 }
 
 /* All th/td base */
 .structured-tool-table th,
 .structured-tool-table td {
-  border-bottom: 1px solid #c8d5c8;
-  border-right: 1px solid #c8d5c8;
+  border-bottom: 1px solid #d4dfd4;
+  border-right: 1px solid #d4dfd4;
   padding: 0;
   vertical-align: middle;
 }
@@ -2629,12 +2675,12 @@ button:active {
 /* Add left border to the first column */
 .structured-tool-table th:first-child,
 .structured-tool-table td:first-child {
-  border-left: 1px solid #c8d5c8;
+  border-left: 1px solid #d4dfd4;
 }
 
 /* Add top border to the first row cells */
 .main-header-row th {
-  border-top: 1px solid #c8d5c8;
+  border-top: 1px solid #d4dfd4;
 }
 
 /* ---- HEADER ROWS ---- */
@@ -2729,7 +2775,8 @@ button:active {
   max-width: 40px;
 }
 
-.row-no, .delete-row-cell {
+.row-no,
+.delete-row-cell {
   text-align: center;
   font-weight: 700;
   color: var(--color-neutral-500);
@@ -2976,4 +3023,128 @@ button:active {
 .add-row-btn:hover {
   background-color: #e8f5ee;
   border-style: solid;
+}
+
+.tool-3-table {
+  table-layout: fixed;
+}
+
+.tool-3-table th:nth-child(1),
+.tool-3-table td:nth-child(1) {
+  width: 32%;
+}
+
+.tool-3-table th:nth-child(2),
+.tool-3-table td:nth-child(2) {
+  width: 32%;
+}
+
+.tool-3-table th:nth-child(3),
+.tool-3-table td:nth-child(3) {
+  width: 30%;
+}
+
+.tool-3-table th:nth-child(4),
+.tool-3-table td:nth-child(4) {
+  width: 6%;
+}
+
+.worksheet-title-row th {
+  background-color: #1f7a3a;
+  color: white;
+  font-size: 16px;
+  font-weight: 800;
+  text-align: left;
+  padding: 6px 8px;
+}
+
+.tool-3-section-row td {
+  background-color: #d8e8bd;
+  color: #111827;
+  font-weight: 800;
+  padding: 6px 8px;
+}
+
+.tool-3-question-row td {
+  min-height: 104px;
+}
+
+.tool-3-question {
+  background-color: white;
+  color: #111827;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.45;
+  padding: 8px;
+}
+
+.tool-3-question-select {
+  width: 100%;
+  min-height: 42px;
+  border: 1px solid var(--color-neutral-200);
+  border-radius: 6px;
+  background-color: white;
+  color: #111827;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 8px;
+}
+
+.tool-3-actions-cell {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.row-action-btn.save {
+  color: var(--color-primary-600);
+}
+
+.row-action-btn.edit {
+  color: var(--color-neutral-600);
+}
+
+.row-action-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+.tool-3-table textarea:disabled {
+  color: #111827;
+  opacity: 1;
+  cursor: default;
+}
+
+.tool-4-table {
+  table-layout: fixed;
+}
+
+.tool-4-table th,
+.tool-4-table td {
+  width: 20%;
+}
+
+.tool-4-table .sub-header-row th {
+  background-color: #c8dda1;
+  color: #111827;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.35;
+  text-align: left;
+  padding: 8px;
+}
+
+.tool-4-hint-row td {
+  background-color: white;
+  color: #111827;
+  font-size: 12px;
+  font-style: italic;
+  line-height: 1.4;
+  min-height: 88px;
+  padding: 6px 8px;
+  vertical-align: top;
+}
+
+.tool-4-data-row td {
+  min-height: 92px;
 }

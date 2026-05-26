@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { 
-  ArrowLeft, Save, ArrowRight, Plus, Trash2, 
-  ClipboardList, PlusCircle, CircleDashed, Home, 
+import {
+  ArrowLeft, Save, ArrowRight, Plus, Trash2,
+  ClipboardList, PlusCircle, CircleDashed, Home,
   HelpCircle, Settings, BarChart2, Shield, MessageSquare,
   HelpCircle as QuestionIcon
 } from 'lucide-react';
@@ -16,23 +16,23 @@ export default function Tool2Page() {
   const { id: siteId } = useParams();
   const navigate = useNavigate();
   const toast = useToast();
-  
+
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
   const [site, setSite] = useState(null);
   const [rating, setRating] = useState(null);
-  
+
   const [formData, setFormData] = useState({
     factors: [
-      { 
-        factor: '', posNeg: '', currentPotential: '', origin: '', causes: '', 
-        attributes: '', extent: '', severity: '', action: '', priority: '', 
-        responsibility: '', comment: '' 
+      {
+        factor: '', posNeg: '', currentPotential: '', origin: '', causes: '',
+        attributes: '', extent: '', severity: '', action: '', priority: '',
+        responsibility: '', comment: ''
       },
-      { 
-        factor: '', posNeg: '', currentPotential: '', origin: '', causes: '', 
-        attributes: '', extent: '', severity: '', action: '', priority: '', 
-        responsibility: '', comment: '' 
+      {
+        factor: '', posNeg: '', currentPotential: '', origin: '', causes: '',
+        attributes: '', extent: '', severity: '', action: '', priority: '',
+        responsibility: '', comment: ''
       },
     ],
     analysis: '',
@@ -47,7 +47,7 @@ export default function Tool2Page() {
           getSite(siteId),
           getAssessment(siteId, 2)
         ]);
-        
+
         setSite(siteRes.data);
         if (assessmentRes.data) {
           setFormData(assessmentRes.data);
@@ -75,10 +75,10 @@ export default function Tool2Page() {
   const addRow = () => {
     setFormData(prev => ({
       ...prev,
-      factors: [...prev.factors, { 
-        factor: '', posNeg: '', currentPotential: '', origin: '', causes: '', 
-        attributes: '', extent: '', severity: '', action: '', priority: '', 
-        responsibility: '', comment: '' 
+      factors: [...prev.factors, {
+        factor: '', posNeg: '', currentPotential: '', origin: '', causes: '',
+        attributes: '', extent: '', severity: '', action: '', priority: '',
+        responsibility: '', comment: ''
       }]
     }));
   };
@@ -141,7 +141,7 @@ export default function Tool2Page() {
   if (loading) return <div className="flex justify-center py-20"><Spinner /></div>;
 
   return (
-    <motion.div 
+    <motion.div
       className="tool-page tool-2-page"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
@@ -157,7 +157,7 @@ export default function Tool2Page() {
         </div>
       </div>
 
-      <div className="excel-worksheet">
+      <div className="excel-worksheet" style={{ borderColor: 'white' }}>
         <div className="table-responsive">
           <table className="worksheet-table structured-tool-table">
             <thead>
@@ -253,17 +253,17 @@ export default function Tool2Page() {
                     <div className="numbered-circle">{idx + 1}</div>
                   </td>
                   <td>
-                    <textarea 
+                    <textarea
                       className="table-textarea"
-                      value={row.factor} 
-                      onChange={(e) => handleInputChange(idx, 'factor', e.target.value)} 
+                      value={row.factor}
+                      onChange={(e) => handleInputChange(idx, 'factor', e.target.value)}
                     />
                   </td>
                   <td>
                     <div className="table-select-container">
-                      <select 
+                      <select
                         className={`table-select ${getCapsuleClass(row.posNeg)}`}
-                        value={row.posNeg} 
+                        value={row.posNeg}
                         onChange={(e) => handleInputChange(idx, 'posNeg', e.target.value)}
                       >
                         <option value="">Select</option>
@@ -273,9 +273,9 @@ export default function Tool2Page() {
                   </td>
                   <td>
                     <div className="table-select-container">
-                      <select 
+                      <select
                         className={`table-select ${getCapsuleClass(row.currentPotential)}`}
-                        value={row.currentPotential} 
+                        value={row.currentPotential}
                         onChange={(e) => handleInputChange(idx, 'currentPotential', e.target.value)}
                       >
                         <option value="">Select</option>
@@ -285,9 +285,9 @@ export default function Tool2Page() {
                   </td>
                   <td>
                     <div className="table-select-container">
-                      <select 
+                      <select
                         className={`table-select ${getCapsuleClass(row.origin)}`}
-                        value={row.origin} 
+                        value={row.origin}
                         onChange={(e) => handleInputChange(idx, 'origin', e.target.value)}
                       >
                         <option value="">Select</option>
@@ -296,24 +296,24 @@ export default function Tool2Page() {
                     </div>
                   </td>
                   <td>
-                    <textarea 
+                    <textarea
                       className="table-textarea"
-                      value={row.causes} 
-                      onChange={(e) => handleInputChange(idx, 'causes', e.target.value)} 
+                      value={row.causes}
+                      onChange={(e) => handleInputChange(idx, 'causes', e.target.value)}
                     />
                   </td>
                   <td>
-                    <textarea 
+                    <textarea
                       className="table-textarea"
-                      value={row.attributes} 
-                      onChange={(e) => handleInputChange(idx, 'attributes', e.target.value)} 
+                      value={row.attributes}
+                      onChange={(e) => handleInputChange(idx, 'attributes', e.target.value)}
                     />
                   </td>
                   <td>
                     <div className="table-select-container">
-                      <select 
+                      <select
                         className={`table-select ${getCapsuleClass(row.extent)}`}
-                        value={row.extent} 
+                        value={row.extent}
                         onChange={(e) => handleInputChange(idx, 'extent', e.target.value)}
                       >
                         <option value="">Select</option>
@@ -323,9 +323,9 @@ export default function Tool2Page() {
                   </td>
                   <td>
                     <div className="table-select-container">
-                      <select 
+                      <select
                         className={`table-select ${getCapsuleClass(row.severity)}`}
-                        value={row.severity} 
+                        value={row.severity}
                         onChange={(e) => handleInputChange(idx, 'severity', e.target.value)}
                       >
                         <option value="">Select</option>
@@ -334,17 +334,17 @@ export default function Tool2Page() {
                     </div>
                   </td>
                   <td>
-                    <textarea 
+                    <textarea
                       className="table-textarea"
-                      value={row.action} 
-                      onChange={(e) => handleInputChange(idx, 'action', e.target.value)} 
+                      value={row.action}
+                      onChange={(e) => handleInputChange(idx, 'action', e.target.value)}
                     />
                   </td>
                   <td>
                     <div className="table-select-container">
-                      <select 
+                      <select
                         className={`table-select ${getCapsuleClass(row.priority)}`}
-                        value={row.priority} 
+                        value={row.priority}
                         onChange={(e) => handleInputChange(idx, 'priority', e.target.value)}
                       >
                         <option value="">Select</option>
@@ -353,17 +353,17 @@ export default function Tool2Page() {
                     </div>
                   </td>
                   <td>
-                    <textarea 
+                    <textarea
                       className="table-textarea"
-                      value={row.responsibility} 
-                      onChange={(e) => handleInputChange(idx, 'responsibility', e.target.value)} 
+                      value={row.responsibility}
+                      onChange={(e) => handleInputChange(idx, 'responsibility', e.target.value)}
                     />
                   </td>
                   <td>
-                    <textarea 
+                    <textarea
                       className="table-textarea"
-                      value={row.comment} 
-                      onChange={(e) => handleInputChange(idx, 'comment', e.target.value)} 
+                      value={row.comment}
+                      onChange={(e) => handleInputChange(idx, 'comment', e.target.value)}
                     />
                   </td>
                   <td className="delete-row-cell">
@@ -387,24 +387,24 @@ export default function Tool2Page() {
         <div className="worksheet-bottom-sections">
           <div className="bottom-section">
             <div className="section-label">Analysis and conclusions</div>
-            <textarea 
-              value={formData.analysis} 
+            <textarea
+              value={formData.analysis}
               onChange={(e) => handleTextareaChange('analysis', e.target.value)}
               placeholder="Enter analysis and conclusions here..."
             />
           </div>
           <div className="bottom-section">
             <div className="section-label">Gaps and challenges</div>
-            <textarea 
-              value={formData.gaps} 
+            <textarea
+              value={formData.gaps}
               onChange={(e) => handleTextareaChange('gaps', e.target.value)}
               placeholder="Enter gaps and challenges here..."
             />
           </div>
           <div className="bottom-section">
             <div className="section-label">Opportunities, recommendations and follow-up actions</div>
-            <textarea 
-              value={formData.recommendations} 
+            <textarea
+              value={formData.recommendations}
               onChange={(e) => handleTextareaChange('recommendations', e.target.value)}
               placeholder="Enter opportunities and recommendations here..."
             />
@@ -415,7 +415,7 @@ export default function Tool2Page() {
           <h3 className="rating-title">Rating: Analysis of Factors</h3>
           <div className="rating-options">
             {ratingOptions.map((opt) => (
-              <motion.div 
+              <motion.div
                 key={opt.value}
                 className={`rating-option ${rating === opt.value ? 'selected' : ''}`}
                 onClick={() => setRating(opt.value)}

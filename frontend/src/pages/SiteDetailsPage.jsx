@@ -131,7 +131,7 @@ export default function SiteDetailsPage() {
     return (
       <div className="empty-state">
         <p>Site not found.</p>
-        <button className="btn-cancel" onClick={() => navigate('/dashboard')}>Go Back</button>
+        <button className="btn-cancel" onClick={() => navigate('/sites')}>Go Back</button>
       </div>
     );
   }
@@ -143,7 +143,7 @@ export default function SiteDetailsPage() {
       {/* Header */}
       <div className="site-details-header">
         <div className="site-details-header__left">
-          <button className="back-btn-icon" onClick={() => navigate('/dashboard')}>
+          <button className="back-btn-icon" onClick={() => navigate('/sites')}>
             <ArrowLeft size={20} />
           </button>
           <h1 className="site-details-title">{site.name}</h1>

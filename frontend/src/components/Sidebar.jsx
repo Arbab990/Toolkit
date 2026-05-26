@@ -1,11 +1,9 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import {
   LayoutDashboard,
   MapPin,
   ClipboardCheck,
   FileBarChart,
-  Zap,
-  BookOpen,
   Settings,
   HardDrive,
   Leaf,
@@ -13,13 +11,15 @@ import {
 
 const navItems = [
   { label: 'Dashboard', icon: LayoutDashboard, path: '/dashboard' },
-  { label: 'Sites', icon: MapPin, path: '/' },
+  { label: 'Sites', icon: MapPin, path: '/sites' },
   { label: 'Assessments', icon: ClipboardCheck, path: '/assessments' },
   { label: 'Reports', icon: FileBarChart, path: '/reports' },
   { label: 'Settings', icon: Settings, path: '/settings' },
 ];
 
 export default function Sidebar({ isOpen }) {
+  const location = useLocation();
+
   return (
     <aside className={`sidebar ${isOpen ? 'sidebar--open' : ''}`} id="sidebar">
       {/* Brand */}
@@ -41,10 +41,11 @@ export default function Sidebar({ isOpen }) {
             <NavLink
               key={item.label}
               to={item.path}
-              end={item.path === '/'}
-              className={({ isActive }) =>
-                `sidebar__nav-item${isActive ? ' sidebar__nav-item--active' : ''}`
-              }
+              end
+              className={({ isActive }) => {
+                const isSitesLanding = item.path === '/sites' && location.pathname === '/';
+                return `sidebar__nav-item${isActive || isSitesLanding ? ' sidebar__nav-item--active' : ''}`;
+              }}
               id={`nav-${item.label.toLowerCase()}`}
             >
               <Icon />

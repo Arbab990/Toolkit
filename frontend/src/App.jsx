@@ -8,6 +8,9 @@ import NewSitePage from './pages/NewSitePage';
 import SiteDetailsPage from './pages/SiteDetailsPage';
 import Tool1Page from './pages/Tool1Page';
 import Tool2Page from './pages/Tool2Page';
+import Tool3Page from './pages/Tool3Page';
+import Tool4Page from './pages/Tool4Page';
+import ComingSoonPage from './pages/ComingSoonPage';
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
 import ForgotPasswordPage from './pages/ForgotPasswordPage';
@@ -36,13 +39,16 @@ export default function App() {
               }
             >
               <Route path="/" element={<SitesPage />} />
+              <Route path="/sites" element={<SitesPage />} />
               <Route path="/sites/new" element={<NewSitePage />} />
               <Route path="/sites/:id" element={<SiteDetailsPage />} />
               <Route path="/sites/:id/tool/1" element={<Tool1Page />} />
               <Route path="/sites/:id/tool/2" element={<Tool2Page />} />
-              <Route path="/dashboard" element={<SitesPage />} />
-              <Route path="/assessments" element={<SitesPage />} />
-              <Route path="/reports" element={<SitesPage />} />
+              <Route path="/sites/:id/tool/3" element={<Tool3Page />} />
+              <Route path="/sites/:id/tool/4" element={<Tool4Page />} />
+              <Route path="/dashboard" element={<ComingSoonPage title="Dashboard" />} />
+              <Route path="/assessments" element={<ComingSoonPage title="Assessments" />} />
+              <Route path="/reports" element={<ComingSoonPage title="Reports" />} />
               <Route path="/actions" element={<SitesPage />} />
               <Route path="/library" element={<SitesPage />} />
               <Route path="/settings" element={<SettingsPage />} />
