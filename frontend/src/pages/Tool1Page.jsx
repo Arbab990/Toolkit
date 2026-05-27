@@ -180,17 +180,11 @@ export default function Tool1Page() {
   const [formData, setFormData] = useState({
     worksheet1a: [
       { levelOfRecognition: '', values: '', attributes: '', sources: [] },
-      { levelOfRecognition: '', values: '', attributes: '', sources: [] },
-      { levelOfRecognition: '', values: '', attributes: '', sources: [] },
     ],
     managementObjectives: [
       { objective: '', values: '', sources: '', comments: '' },
-      { objective: '', values: '', sources: '', comments: '' },
-      { objective: '', values: '', sources: '', comments: '' },
     ],
     desiredOutcomes: [
-      { outcome: '', values: '', sources: '', comments: '' },
-      { outcome: '', values: '', sources: '', comments: '' },
       { outcome: '', values: '', sources: '', comments: '' },
     ],
     analysis1a: '',
@@ -215,8 +209,12 @@ export default function Tool1Page() {
             ...assessmentRes.data,
             worksheet1a: assessmentRes.data.worksheet1a || [
               { levelOfRecognition: '', values: '', attributes: '', sources: [] },
-              { levelOfRecognition: '', values: '', attributes: '', sources: [] },
-              { levelOfRecognition: '', values: '', attributes: '', sources: [] },
+            ],
+            managementObjectives: assessmentRes.data.managementObjectives || [
+              { objective: '', values: '', sources: '', comments: '' },
+            ],
+            desiredOutcomes: assessmentRes.data.desiredOutcomes || [
+              { outcome: '', values: '', sources: '', comments: '' },
             ]
           });
           if (assessmentRes.data.rating !== undefined) {
@@ -318,16 +316,17 @@ export default function Tool1Page() {
       </div>
 
       <div className="excel-worksheet" style={{ borderColor: 'white', marginBottom: '32px' }}>
-        <table className="worksheet-table structured-tool-table">
-          <thead>
-            <tr className="worksheet-title-row">
-              <th colSpan="5">
-                <div className="worksheet-title-content">
-                  <ClipboardList size={18} />
-                  <span>Worksheet 1a. Assessment of values and attributes</span>
-                </div>
-              </th>
-            </tr>
+        <div className="table-responsive">
+          <table className="worksheet-table structured-tool-table" style={{ minWidth: '900px' }}>
+            <thead>
+              <tr className="worksheet-title-row">
+                <th colSpan="5">
+                  <div className="worksheet-title-content">
+                    <ClipboardList size={18} />
+                    <span>Worksheet 1a. Assessment of values and attributes</span>
+                  </div>
+                </th>
+              </tr>
             <tr className="sub-header-row">
               <th style={{ width: '15%' }}>Level of recognition</th>
               <th style={{ width: '25%' }}>Values</th>
@@ -370,7 +369,7 @@ export default function Tool1Page() {
                 </td>
                 <td className="delete-row-cell" style={{ verticalAlign: 'top' }}>
                   <button className="row-action-btn delete" onClick={() => removeRow('worksheet1a', idx)}>
-                    <Trash2 size={16} />
+                    <Trash2 size={18} />
                   </button>
                 </td>
               </tr>
@@ -384,6 +383,7 @@ export default function Tool1Page() {
             </tr>
           </tbody>
         </table>
+        </div>
 
         <div className="worksheet-bottom-sections">
           <div className="bottom-section">
@@ -420,8 +420,9 @@ export default function Tool1Page() {
       </div>
 
       <div className="excel-worksheet" style={{ borderColor: 'white' }}>
-        <table className="worksheet-table structured-tool-table">
-          <thead>
+        <div className="table-responsive">
+          <table className="worksheet-table structured-tool-table" style={{ minWidth: '900px' }}>
+            <thead>
             <tr className="worksheet-title-row">
               <th colSpan="5">
                 <div className="worksheet-title-content">
@@ -489,6 +490,7 @@ export default function Tool1Page() {
             </tr>
           </tbody>
         </table>
+        </div>
 
         <div className="worksheet-bottom-sections">
           <div className="bottom-section">
