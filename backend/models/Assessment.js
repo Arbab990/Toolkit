@@ -24,8 +24,7 @@ const AssessmentSchema = new mongoose.Schema({
     default: false
   },
   rating: {
-    type: String,
-    enum: ['Good', 'Good with some concerns', 'Significant concern', 'Critical', 'Data deficient', null],
+    type: mongoose.Schema.Types.Mixed,
     default: null
   },
   updatedAt: {

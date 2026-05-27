@@ -23,6 +23,7 @@ import { getAssessment, saveAssessment } from '../services/assessmentService';
 import { getSite } from '../services/siteService';
 import { useToast } from '../context/ToastContext';
 import Spinner from '../components/ui/Spinner';
+import RatingSection from '../components/ui/RatingSection';
 
 const columns = [
   {
@@ -166,6 +167,11 @@ export default function Tool4Page() {
       recommendations: '',
     },
   });
+  const [ratings, setRatings] = useState({
+    '4a': null,
+    '4b': null,
+    '4c': null,
+  });
 
   useEffect(() => {
     const fetchData = async () => {
@@ -195,6 +201,9 @@ export default function Tool4Page() {
               recommendations: assessmentRes.data.worksheet4c?.recommendations || '',
             },
           });
+          if (assessmentRes.data.rating && typeof assessmentRes.data.rating === 'object') {
+            setRatings(assessmentRes.data.rating);
+          }
         }
       } catch (err) {
         toast.error('Failed to load data');
@@ -256,12 +265,12 @@ export default function Tool4Page() {
     }));
   };
 
-  const saveData = async (nextData, isCompleted = false) => {
+  const saveData = async (nextData, nextRatings, isCompleted = false) => {
     await saveAssessment({
       siteId,
       toolNumber: 4,
       data: nextData,
-      rating: null,
+      rating: nextRatings,
       isCompleted,
     });
   };
@@ -470,6 +479,12 @@ export default function Tool4Page() {
             />
           </div>
         </div>
+        
+        <RatingSection 
+          title="RATING: ROLES AND RESPONSIBILITIES OF MANAGERS" 
+          rating={ratings['4a']} 
+          onRatingChange={(r) => setRatings(prev => ({...prev, '4a': r}))} 
+        />
       </div>
 
       <div className="excel-worksheet tool-4b-worksheet" style={{ borderColor: 'white', marginTop: '32px' }}>
@@ -655,6 +670,12 @@ export default function Tool4Page() {
             />
           </div>
         </div>
+
+        <RatingSection 
+          title="RATING: COORDINATION AND COLLABORATION BETWEEN MANAGERS" 
+          rating={ratings['4b']} 
+          onRatingChange={(r) => setRatings(prev => ({...prev, '4b': r}))} 
+        />
       </div>
 
       <div className="excel-worksheet tool-4c-worksheet" style={{ borderColor: 'white', marginTop: '32px' }}>
@@ -859,6 +880,12 @@ export default function Tool4Page() {
             />
           </div>
         </div>
+
+        <RatingSection 
+          title="RATING: RIGHTS-HOLDERS' ENGAGEMENT IN MANAGEMENT" 
+          rating={ratings['4c']} 
+          onRatingChange={(r) => setRatings(prev => ({...prev, '4c': r}))} 
+        />
       </div>
 
       <div className="tool-footer">

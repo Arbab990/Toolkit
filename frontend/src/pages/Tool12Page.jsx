@@ -14,6 +14,7 @@ import { getAssessment, saveAssessment } from '../services/assessmentService';
 import { getSite } from '../services/siteService';
 import { useToast } from '../context/ToastContext';
 import Spinner from '../components/ui/Spinner';
+import RatingSection from '../components/ui/RatingSection';
 
 /* ─── Tool → Worksheet mapping ─────────────────────────────────── */
 const TOOL_WORKSHEET_MAP = [
@@ -151,6 +152,7 @@ export default function Tool12Page() {
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
   const [site, setSite] = useState(null);
+  const [rating, setRating] = useState(null);
   const [rows, setRows] = useState([createRow()]);
 
   useEffect(() => {
@@ -161,7 +163,11 @@ export default function Tool12Page() {
           getAssessment(siteId, 12),
         ]);
         setSite(siteRes.data);
-        if (assessmentRes.data?.rows?.length) setRows(assessmentRes.data.rows);
+        if (assessmentRes.data) {
+          if (assessmentRes.data.rows?.length) setRows(assessmentRes.data.rows);
+          if (assessmentRes.data.data?.rows?.length) setRows(assessmentRes.data.data.rows);
+          if (assessmentRes.data.rating) setRating(assessmentRes.data.rating);
+        }
       } catch {
         toast.error('Failed to load data');
       } finally {
@@ -201,7 +207,7 @@ export default function Tool12Page() {
         siteId,
         toolNumber: 12,
         data: { rows },
-        rating: null,
+        rating: rating,
         isCompleted: isNext,
       });
       if (isNext) {
@@ -308,6 +314,12 @@ export default function Tool12Page() {
             </table>
           </div>
         </div>
+
+        <RatingSection 
+          title="RATING: REVIEW OF OUTCOMES AND FOLLOW-UP ACTIONS" 
+          rating={rating} 
+          onRatingChange={setRating} 
+        />
 
         <div className="tool-footer">
           <button className="btn-save" onClick={() => onSave(false)} disabled={saving}>

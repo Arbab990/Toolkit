@@ -20,6 +20,7 @@ import { getAssessment, saveAssessment } from '../services/assessmentService';
 import { getSite } from '../services/siteService';
 import { useToast } from '../context/ToastContext';
 import Spinner from '../components/ui/Spinner';
+import RatingSection from '../components/ui/RatingSection';
 
 /* ─── SVG Star helpers ─────────────────────────────────────────── */
 const FullStar = ({ size = 16 }) => (
@@ -260,6 +261,7 @@ export default function Tool10Page() {
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
   const [site, setSite] = useState(null);
+  const [rating, setRating] = useState(null);
   const [formData, setFormData] = useState({
     rows: createRows(),
     analysis: '',
@@ -282,6 +284,9 @@ export default function Tool10Page() {
             gaps: assessmentRes.data.gaps || '',
             recommendations: assessmentRes.data.recommendations || '',
           });
+          if (assessmentRes.data.rating) {
+            setRating(assessmentRes.data.rating);
+          }
         }
       } catch {
         toast.error('Failed to load data');
@@ -327,7 +332,7 @@ export default function Tool10Page() {
         siteId,
         toolNumber: 10,
         data: formData,
-        rating: null,
+        rating: rating,
         isCompleted: isNext,
       });
       toast.success('Assessment saved successfully');
@@ -465,6 +470,12 @@ export default function Tool10Page() {
             />
           </div>
         </div>
+
+        <RatingSection 
+          title="RATING: IMPLEMENTATION OF MANAGEMENT ACTIONS" 
+          rating={rating} 
+          onRatingChange={setRating} 
+        />
       </div>
 
       <div className="tool-footer">

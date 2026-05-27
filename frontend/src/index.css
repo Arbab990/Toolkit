@@ -3680,4 +3680,131 @@ button:active {
   top: -20px;
   animation: confettiFall linear infinite;
 }
+
+/* ─── Tool 11 CSS ─────────────────────────────────────────────── */
+.tool-11-worksheet table,
+.tool-11-worksheet tbody,
+.tool-11-worksheet tr,
+.tool-11-worksheet td {
+  overflow: visible !important;
+}
+
+.tool-11-table {
+  table-layout: fixed;
+  min-width: 1200px;
+}
+
+.tool-11-col-attribute { width: 12%; }
+.tool-11-col-indicator { width: 12%; }
+.tool-11-col-threshold { width: 12%; }
+.tool-11-col-overallState { width: 15%; }
+.tool-11-col-comparison { width: 15%; }
+.tool-11-col-status { width: 60px; min-width: 60px; }
+.tool-11-col-trend { width: 60px; min-width: 60px; }
+.tool-11-col-management { width: auto; }
+.tool-11-actions-col { width: 40px; min-width: 40px; }
+
+.tool-11-table th.sub-col-header {
+  font-size: 11px;
+  background-color: var(--color-primary-50);
+  color: var(--color-primary-800);
+  padding: 4px;
+}
+
+.tool-11-table .rating-cell {
+  padding: 4px;
+  vertical-align: top;
+}
+
+.tool-11-rating-picker {
+  position: relative;
+  width: 100%;
+}
+
+.tool-11-worksheet .table-responsive {
+  padding-bottom: 240px; /* Provides space so dropdowns aren't clipped */
+}
+
+.tool-11-rating-picker__button {
+  width: 100%;
+  min-height: 28px;
+  border: 1px solid var(--color-neutral-200);
+  border-radius: 20px;
+  padding: 4px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: left;
+  transition: all 0.2s;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.tool-11-rating-picker__button svg {
+  flex: 0 0 auto;
+}
+
+.tool-11-rating-picker__menu {
+  position: absolute;
+  z-index: 100;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  max-height: 240px;
+  overflow-y: auto;
+  background-color: white;
+  border: 1px solid var(--color-neutral-200);
+  border-radius: 8px;
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  flex-direction: column;
+}
+
+.tool-11-rating-picker__option {
+  width: 100%;
+  padding: 10px 12px;
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 700;
+  text-align: left;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  transition: opacity 0.2s;
+}
+
+.tool-11-rating-picker__option:hover {
+  opacity: 0.85;
+}
+
+.tool-11-rating-picker__option:last-child {
+  border-bottom: none;
+}
+
+.tool-11-data-row td {
+  vertical-align: top;
+}
+
+/* Bottom Sections styling */
+.bottom-section-row td.bottom-section-label {
+  background-color: #d1fae5;
+  color: #064e3b;
+  font-weight: 700;
+  font-size: 13px;
+  padding: 16px 12px;
+  vertical-align: top;
+  border-right: 1px solid var(--color-neutral-200);
+}
+
+.bottom-section-row td.bottom-section-label .label-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.bottom-section-row td.bottom-section-label .label-content svg {
+  margin-top: 2px;
+  flex: 0 0 auto;
+}
 

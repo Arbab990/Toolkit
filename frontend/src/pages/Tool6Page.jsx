@@ -23,6 +23,7 @@ import { getAssessment, saveAssessment } from '../services/assessmentService';
 import { getSite } from '../services/siteService';
 import { useToast } from '../context/ToastContext';
 import Spinner from '../components/ui/Spinner';
+import RatingSection from '../components/ui/RatingSection';
 import Select from 'react-select';
 
 const columns = [
@@ -235,6 +236,10 @@ export default function Tool6Page() {
       recommendations: '',
     },
   });
+  const [ratings, setRatings] = useState({
+    '6a': null,
+    '6b': null,
+  });
 
   useEffect(() => {
     const fetchData = async () => {
@@ -259,6 +264,9 @@ export default function Tool6Page() {
               recommendations: assessmentRes.data.worksheet6b?.recommendations || '',
             },
           });
+          if (assessmentRes.data.rating && typeof assessmentRes.data.rating === 'object') {
+            setRatings(assessmentRes.data.rating);
+          }
         }
       } catch (err) {
         toast.error('Failed to load data');
@@ -311,7 +319,7 @@ export default function Tool6Page() {
         siteId,
         toolNumber: 6,
         data: nextData,
-        rating: null,
+        rating: ratings,
         isCompleted: false,
       });
       setFormData(nextData);
@@ -670,6 +678,12 @@ export default function Tool6Page() {
             />
           </div>
         </div>
+
+        <RatingSection 
+          title="RATING: MANAGEMENT PLANNING FRAMEWORK" 
+          rating={ratings['6a']} 
+          onRatingChange={(r) => setRatings(prev => ({...prev, '6a': r}))} 
+        />
       </div>
 
       <div className="excel-worksheet tool-6b-worksheet" style={{ borderColor: 'white', marginTop: '32px' }}>
@@ -743,6 +757,12 @@ export default function Tool6Page() {
             />
           </div>
         </div>
+
+        <RatingSection 
+          title="RATING: PRIMARY PLANNING INSTRUMENT" 
+          rating={ratings['6b']} 
+          onRatingChange={(r) => setRatings(prev => ({...prev, '6b': r}))} 
+        />
       </div>
 
       <div className="tool-footer">

@@ -14,6 +14,7 @@ import { getAssessment, saveAssessment } from '../services/assessmentService';
 import { getSite } from '../services/siteService';
 import { useToast } from '../context/ToastContext';
 import Spinner from '../components/ui/Spinner';
+import RatingSection from '../components/ui/RatingSection';
 
 const worksheet8bSections = [
   {
@@ -108,6 +109,9 @@ export default function Tool8Page() {
       recommendations: '',
     }
   });
+  const [ratings, setRatings] = useState({
+    '8b': null,
+  });
 
   useEffect(() => {
     const fetchData = async () => {
@@ -127,6 +131,9 @@ export default function Tool8Page() {
               recommendations: assessmentRes.data.worksheet8b?.recommendations || '',
             }
           });
+          if (assessmentRes.data.rating && typeof assessmentRes.data.rating === 'object') {
+            setRatings(assessmentRes.data.rating);
+          }
         }
       } catch (err) {
         toast.error('Failed to load data');
@@ -176,7 +183,7 @@ export default function Tool8Page() {
         siteId,
         toolNumber: 8,
         data: nextData,
-        rating: null,
+        rating: ratings,
         isCompleted: false,
       });
       setFormData(nextData);
@@ -197,7 +204,7 @@ export default function Tool8Page() {
         siteId,
         toolNumber: 8,
         data: formData,
-        rating: null,
+        rating: ratings,
         isCompleted: isNext,
       });
       toast.success('Assessment saved successfully');
@@ -413,6 +420,12 @@ export default function Tool8Page() {
             />
           </div>
         </div>
+
+        <RatingSection 
+          title="RATING: OTHER IMPORTANT MANAGEMENT PROCESSES" 
+          rating={ratings['8b']} 
+          onRatingChange={(r) => setRatings(prev => ({...prev, '8b': r}))} 
+        />
       </div>
 
       <div className="tool-footer">

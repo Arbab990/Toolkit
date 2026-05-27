@@ -4,13 +4,13 @@ import { motion } from 'framer-motion';
 import {
   ArrowLeft, Save, ArrowRight, Plus, Trash2,
   ClipboardList, PlusCircle, CircleDashed, Home,
-  HelpCircle, Settings, BarChart2, Shield, MessageSquare,
-  HelpCircle as QuestionIcon
+  HelpCircle, Settings, BarChart2, Shield, MessageSquare
 } from 'lucide-react';
 import { getAssessment, saveAssessment } from '../services/assessmentService';
 import { getSite } from '../services/siteService';
 import { useToast } from '../context/ToastContext';
 import Spinner from '../components/ui/Spinner';
+import RatingSection from '../components/ui/RatingSection';
 
 export default function Tool2Page() {
   const { id: siteId } = useParams();
@@ -99,13 +99,6 @@ export default function Tool2Page() {
     priority: ['Low', 'Medium', 'High'],
   };
 
-  const ratingOptions = [
-    { value: 'Good', label: 'Good', colorClass: 'good' },
-    { value: 'Good with some concerns', label: 'Good with some concerns', colorClass: 'concerns' },
-    { value: 'Significant concern', label: 'Significant concern', colorClass: 'significant' },
-    { value: 'Critical', label: 'Critical', colorClass: 'critical' },
-    { value: 'Data deficient', label: 'Data deficient', colorClass: 'deficient' },
-  ];
 
   const getCapsuleClass = (value) => {
     if (!value) return '';
@@ -427,23 +420,11 @@ export default function Tool2Page() {
           </div>
         </div>
 
-        <div className="rating-section">
-          <h3 className="rating-title">Rating: Analysis of Factors</h3>
-          <div className="rating-options">
-            {ratingOptions.map((opt) => (
-              <motion.div
-                key={opt.value}
-                className={`rating-option ${rating === opt.value ? 'selected' : ''}`}
-                onClick={() => setRating(opt.value)}
-                whileHover={{ x: 5 }}
-                transition={{ type: 'spring', stiffness: 400, damping: 10 }}
-              >
-                <div className={`rating-dot ${opt.colorClass}`} />
-                <span className={`rating-label ${opt.colorClass}`}>{opt.label}</span>
-              </motion.div>
-            ))}
-          </div>
-        </div>
+        <RatingSection 
+          title="RATING: ANALYSIS OF FACTORS" 
+          rating={rating} 
+          onRatingChange={setRating} 
+        />
       </div>
 
       <div className="tool-footer">

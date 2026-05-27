@@ -6,6 +6,7 @@ import { getAssessment, saveAssessment } from '../services/assessmentService';
 import { getSite } from '../services/siteService';
 import { useToast } from '../context/ToastContext';
 import Spinner from '../components/ui/Spinner';
+import RatingSection from '../components/ui/RatingSection';
 
 const sections = [
   {
@@ -83,6 +84,7 @@ export default function Tool3Page() {
     response: '',
     recommendations: '',
   });
+  const [rating, setRating] = useState(null);
   const [formData, setFormData] = useState({
     rows: createRows(),
     analysis: '',
@@ -101,11 +103,14 @@ export default function Tool3Page() {
         setSite(siteRes.data);
         if (assessmentRes.data) {
           setFormData({
-            rows: normalizeRows(assessmentRes.data.rows),
-            analysis: assessmentRes.data.analysis || '',
-            gaps: assessmentRes.data.gaps || '',
-            recommendations: assessmentRes.data.recommendations || '',
+            rows: normalizeRows(assessmentRes.data.data?.rows || assessmentRes.data.rows),
+            analysis: assessmentRes.data.data?.analysis || assessmentRes.data.analysis || '',
+            gaps: assessmentRes.data.data?.gaps || assessmentRes.data.gaps || '',
+            recommendations: assessmentRes.data.data?.recommendations || assessmentRes.data.recommendations || '',
           });
+          if (assessmentRes.data.rating) {
+            setRating(assessmentRes.data.rating);
+          }
         }
       } catch (err) {
         toast.error('Failed to load data');
@@ -137,7 +142,7 @@ export default function Tool3Page() {
       siteId,
       toolNumber: 3,
       data: nextData,
-      rating: null,
+      rating: rating,
       isCompleted,
     });
   };
@@ -608,6 +613,12 @@ export default function Tool3Page() {
             />
           </div>
         </div>
+
+        <RatingSection 
+          title="RATING: BOUNDARIES, BUFFER ZONES AND THE WIDER SETTING" 
+          rating={rating} 
+          onRatingChange={setRating} 
+        />
       </div>
 
       <div className="tool-footer">

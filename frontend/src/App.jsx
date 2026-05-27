@@ -14,6 +14,7 @@ import Tool6Page from './pages/Tool6Page';
 import Tool7Page from './pages/Tool7Page';
 import Tool8Page from './pages/Tool8Page';
 import Tool10Page from './pages/Tool10Page';
+import Tool11Page from './pages/Tool11Page';
 import Tool12Page from './pages/Tool12Page';
 import ComingSoonPage from './pages/ComingSoonPage';
 import LoginPage from './pages/LoginPage';
@@ -55,6 +56,7 @@ export default function App() {
               <Route path="/sites/:id/tool/7" element={<Tool7Page />} />
               <Route path="/sites/:id/tool/8" element={<Tool8Page />} />
               <Route path="/sites/:id/tool/10" element={<Tool10Page />} />
+              <Route path="/sites/:id/tool/11" element={<Tool11Page />} />
               <Route path="/sites/:id/tool/12" element={<Tool12Page />} />
               <Route path="/dashboard" element={<ComingSoonPage title="Dashboard" />} />
               <Route path="/assessments" element={<ComingSoonPage title="Assessments" />} />

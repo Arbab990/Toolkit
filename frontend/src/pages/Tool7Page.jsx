@@ -26,6 +26,7 @@ import { getAssessment, saveAssessment } from '../services/assessmentService';
 import { getSite } from '../services/siteService';
 import { useToast } from '../context/ToastContext';
 import Spinner from '../components/ui/Spinner';
+import RatingSection from '../components/ui/RatingSection';
 
 const columns = [
   { key: 'staffCategory', label: 'Staff category', icon: Users },
@@ -184,6 +185,11 @@ export default function Tool7Page() {
       recommendations: '',
     }
   });
+  const [ratings, setRatings] = useState({
+    '7a': null,
+    '7b': null,
+    '7c': null,
+  });
 
   useEffect(() => {
     const fetchData = async () => {
@@ -213,6 +219,9 @@ export default function Tool7Page() {
               recommendations: assessmentRes.data.worksheet7c?.recommendations || '',
             }
           });
+          if (assessmentRes.data.rating && typeof assessmentRes.data.rating === 'object') {
+            setRatings(assessmentRes.data.rating);
+          }
         }
       } catch (err) {
         toast.error('Failed to load data');
@@ -318,7 +327,7 @@ export default function Tool7Page() {
         siteId,
         toolNumber: 7,
         data: nextData,
-        rating: null,
+        rating: ratings,
         isCompleted: false,
       });
       setFormData(nextData);
@@ -625,6 +634,12 @@ export default function Tool7Page() {
             />
           </div>
         </div>
+
+        <RatingSection 
+          title="RATING: HUMAN CAPACITY" 
+          rating={ratings['7a']} 
+          onRatingChange={(r) => setRatings(prev => ({...prev, '7a': r}))} 
+        />
       </div>
 
       <div className="excel-worksheet tool-7b-worksheet" style={{ borderColor: 'white', marginTop: '32px' }}>
@@ -720,6 +735,12 @@ export default function Tool7Page() {
             />
           </div>
         </div>
+
+        <RatingSection 
+          title="RATING: FINANCIAL RESOURCES" 
+          rating={ratings['7b']} 
+          onRatingChange={(r) => setRatings(prev => ({...prev, '7b': r}))} 
+        />
       </div>
 
       <div className="excel-worksheet tool-7c-worksheet" style={{ borderColor: 'white', marginTop: '32px' }}>
@@ -779,6 +800,12 @@ export default function Tool7Page() {
             />
           </div>
         </div>
+
+        <RatingSection 
+          title="RATING: OTHER RESOURCES" 
+          rating={ratings['7c']} 
+          onRatingChange={(r) => setRatings(prev => ({...prev, '7c': r}))} 
+        />
       </div>
 
       <div className="tool-footer">
