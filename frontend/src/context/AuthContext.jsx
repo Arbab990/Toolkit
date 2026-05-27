@@ -12,11 +12,11 @@ export function AuthProvider({ children }) {
   const checkAuth = useCallback(async () => {
     // TEMPORARY BYPASS FOR CLIENT PREVIEW (Vercel/Deployment)
     if (import.meta.env.VITE_AUTH_BYPASS === 'true') {
-      setUser({ 
-        _id: 'preview-user', 
-        fullName: 'Client Preview', 
+      setUser({
+        _id: 'preview-user',
+        fullName: 'Client Preview',
         email: 'preview@heritage.com',
-        role: 'admin' 
+        role: 'admin'
       });
       setIsAuthenticated(true);
       setLoading(false);
@@ -45,11 +45,11 @@ export function AuthProvider({ children }) {
   const login = async (email, password) => {
     // TEMPORARY BYPASS FOR CLIENT PREVIEW
     if (import.meta.env.VITE_AUTH_BYPASS === 'true') {
-      const dummyUser = { 
-        _id: 'preview-user', 
-        fullName: 'Client Preview', 
+      const dummyUser = {
+        _id: 'preview-user',
+        fullName: 'Client Preview',
         email: 'preview@heritage.com',
-        role: 'admin' 
+        role: 'admin'
       };
       setUser(dummyUser);
       setIsAuthenticated(true);

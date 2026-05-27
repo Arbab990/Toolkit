@@ -169,7 +169,7 @@ export default function Tool3Page() {
     try {
       await saveData(formData, isNext);
       toast.success('Assessment saved successfully');
-      if (isNext) navigate(`/sites/${siteId}`);
+      if (isNext) navigate(`/sites/${siteId}/tool/4`);
     } catch (err) {
       toast.error('Failed to save assessment');
     } finally {

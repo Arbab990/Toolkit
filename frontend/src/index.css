@@ -2654,6 +2654,22 @@ button:active {
   border: 1px solid #d4dfd4;
 }
 
+/* Fix dropdown clipping in empty worksheets by allowing visible overflow */
+.tool-4b-worksheet .table-responsive,
+.tool-4c-worksheet .table-responsive {
+  overflow: visible;
+}
+
+.tool-4b-worksheet .structured-tool-table,
+.tool-4c-worksheet .structured-tool-table {
+  overflow: visible;
+}
+
+.tool-4b-worksheet .tool-3-question-picker,
+.tool-4c-worksheet .tool-3-question-picker {
+  z-index: 30;
+}
+
 .structured-tool-table {
   border-collapse: separate;
   border-spacing: 0;
@@ -3207,3 +3223,461 @@ button:active {
 .tool-4-data-row td {
   min-height: 92px;
 }
+
+/* Custom colors for approval dropdown */
+.table-select.val-approval-l {
+  background-color: #e0f2fe !important;
+  color: #0369a1 !important;
+}
+
+.table-select.val-approval-g {
+  background-color: #f3e8ff !important;
+  color: #7e22ce !important;
+}
+
+.table-select.val-approval-o {
+  background-color: #ffedd5 !important;
+  color: #c2410c !important;
+}
+
+.table-select.val-approval-sa {
+  background-color: #fce7f3 !important;
+  color: #be185d !important;
+}
+
+.table-select.val-approval-d {
+  background-color: #e0e7ff !important;
+  color: #4338ca !important;
+}
+
+.table-select.val-approval-e {
+  background-color: #ccfbf1 !important;
+  color: #0f766e !important;
+}
+
+/* Left align dropdown options */
+.table-select.approval-select option {
+  text-align: left !important;
+}
+
+/* Tool 6 Table Column Widths & Headers */
+.tool-6-table {
+  table-layout: fixed;
+  min-width: 100%;
+  max-width: 100%;
+}
+
+.tool-6-table th {
+  padding: 8px 3px !important;
+}
+
+.tool-6-table th .th-content {
+  padding: 4px 1px;
+}
+
+.tool-6-table th .th-content span {
+  font-size: 10px;
+  line-height: 1.25;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+.tool-6-col-scope,
+.tool-6-col-approval,
+.tool-6-col-finalizingYear,
+.tool-6-col-startYear,
+.tool-6-col-completionYear {
+  width: 9.5%;
+}
+
+.tool-6-col-name {
+  width: 13%;
+}
+
+.tool-6-col-description,
+.tool-6-col-comments {
+  width: auto;
+}
+
+.tool-6-actions-col,
+.tool-6-table th.action-col,
+.tool-6-table td.delete-row-cell {
+  width: 40px;
+  min-width: 40px;
+  max-width: 40px;
+  padding: 0;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* Tool Dropdown Clipping Overrides (4b, 4c, 6b, 7c, 8b, 12) */
+
+/* Tool 12: override the excel-worksheet overflow:hidden so dropdowns escape */
+.tool-12-worksheet {
+  overflow: visible !important;
+}
+
+.tool-12-worksheet .table-responsive,
+.tool-12-worksheet table,
+.tool-12-worksheet tbody,
+.tool-12-worksheet tr,
+.tool-12-worksheet td {
+  overflow: visible !important;
+}
+
+.tool-4b-worksheet .table-responsive,
+.tool-4c-worksheet .table-responsive,
+.tool-6b-worksheet .table-responsive,
+.tool-7c-worksheet .table-responsive,
+.tool-8b-worksheet .table-responsive,
+.tool-12-worksheet .table-responsive {
+  overflow: visible;
+}
+
+.tool-4b-worksheet .structured-tool-table,
+.tool-4c-worksheet .structured-tool-table,
+.tool-6b-worksheet .structured-tool-table,
+.tool-7c-worksheet .structured-tool-table,
+.tool-8b-worksheet .structured-tool-table,
+.tool-12-worksheet .structured-tool-table {
+  overflow: visible;
+}
+
+.tool-4b-worksheet .tool-3-question-picker,
+.tool-4c-worksheet .tool-3-question-picker,
+.tool-6b-worksheet .tool-3-question-picker,
+.tool-7c-worksheet .tool-3-question-picker,
+.tool-8b-worksheet .tool-3-question-picker,
+.tool-12-worksheet .tool-3-question-picker {
+  z-index: 30;
+}
+
+.tool-4b-worksheet .tool-3-question-picker:focus-within,
+.tool-4c-worksheet .tool-3-question-picker:focus-within,
+.tool-6b-worksheet .tool-3-question-picker:focus-within,
+.tool-7c-worksheet .tool-3-question-picker:focus-within,
+.tool-8b-worksheet .tool-3-question-picker:focus-within,
+.tool-12-worksheet .tool-3-question-picker:focus-within {
+  z-index: 40;
+}
+
+.tool-12-worksheet .tool-3-question-picker__menu {
+  z-index: 100;
+}
+
+/* Tool 7 Table Column Widths & Headers */
+.tool-7-table,
+.tool-7b-table {
+  table-layout: fixed;
+  min-width: 100%;
+  max-width: 100%;
+}
+
+.tool-7-table th,
+.tool-7b-table th {
+  padding: 8px 3px !important;
+}
+
+.tool-7-table th .th-content,
+.tool-7b-table th .th-content {
+  padding: 4px 1px;
+}
+
+.tool-7-table th .th-content span,
+.tool-7b-table th .th-content span {
+  font-size: 10px;
+  line-height: 1.25;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+.tool-7-actions-col,
+.tool-7b-actions-col,
+.tool-7-table th.action-col,
+.tool-7b-table th.action-col,
+.tool-7-table td.delete-row-cell,
+.tool-7b-table td.delete-row-cell {
+  width: 40px;
+  min-width: 40px;
+  max-width: 40px;
+  padding: 0;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* Tool 10 Table Styling */
+.tool-10-table {
+  table-layout: fixed;
+  min-width: 100%;
+  max-width: 100%;
+}
+
+.tool-10-table th {
+  padding: 8px 3px !important;
+}
+
+.tool-10-table th .th-content {
+  padding: 4px 1px;
+}
+
+.tool-10-table th .th-content span {
+  font-size: 10px;
+  line-height: 1.25;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+.tool-10-actions-col,
+.tool-10-table th.action-col,
+.tool-10-table td.delete-row-cell {
+  width: 40px;
+  min-width: 40px;
+  max-width: 40px;
+  padding: 0;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.tool-10-col-performance {
+  width: 13%;
+}
+
+.tool-10-col-previousPerformance {
+  width: 11%;
+}
+
+.tool-10-col-sources {
+  width: 17%;
+}
+
+.tool-10-col-indicator,
+.tool-10-col-outputTarget,
+.tool-10-col-comments {
+  width: auto;
+}
+
+/* ─── Tool 12 Table ─────────────────────────────────────────────── */
+.tool-12-table {
+  table-layout: fixed;
+  min-width: 100%;
+}
+
+.tool-12-table th {
+  padding: 8px 6px !important;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.tool-12-col-tool {
+  width: 22%;
+}
+
+.tool-12-col-worksheet {
+  width: 25%;
+}
+
+.tool-12-col-followup {
+  width: auto;
+}
+
+.tool-12-actions-col,
+.tool-12-table th.action-col,
+.tool-12-table td.delete-row-cell {
+  width: 40px;
+  min-width: 40px;
+  max-width: 40px;
+  padding: 0;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.tool-12-data-row td {
+  vertical-align: top;
+}
+
+/* ─── Complete Assessment button variant ────────────────────────── */
+.btn-complete {
+  background: linear-gradient(135deg, #2d6a4f 0%, #52b788 100%) !important;
+  box-shadow: 0 4px 14px rgba(45, 106, 79, 0.4);
+  gap: 8px;
+}
+
+.btn-complete:hover {
+  background: linear-gradient(135deg, #1b4332 0%, #40916c 100%) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(45, 106, 79, 0.5);
+}
+
+/* ─── Completion overlay & modal ────────────────────────────────── */
+.completion-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.completion-modal {
+  position: relative;
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 48px 40px 40px;
+  max-width: 520px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+
+.completion-modal::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(160deg, rgba(82, 183, 136, 0.08) 0%, rgba(45, 106, 79, 0.04) 100%);
+  pointer-events: none;
+}
+
+.completion-icon-ring {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #2d6a4f, #52b788);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+  box-shadow: 0 8px 24px rgba(45, 106, 79, 0.35);
+}
+
+.completion-title {
+  font-size: 28px;
+  font-weight: 800;
+  color: #1b4332;
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+
+.completion-subtitle {
+  font-size: 15px;
+  color: #6b7280;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.completion-site-name {
+  font-size: 18px;
+  font-weight: 700;
+  color: #2d6a4f;
+  background: linear-gradient(135deg, rgba(82, 183, 136, 0.15), rgba(45, 106, 79, 0.1));
+  border: 1.5px solid rgba(82, 183, 136, 0.4);
+  border-radius: 12px;
+  padding: 10px 20px;
+  margin: 0 auto 16px;
+  display: inline-block;
+  max-width: 100%;
+}
+
+.completion-description {
+  font-size: 13px;
+  color: #9ca3af;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.completion-badges {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+
+.completion-badge {
+  background: #d1fae5;
+  color: #065f46;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 5px 12px;
+  border-radius: 20px;
+  border: 1px solid #6ee7b7;
+}
+
+.completion-redirect-msg {
+  font-size: 13px;
+  color: #9ca3af;
+  margin-bottom: 14px;
+}
+
+.completion-countdown {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  background: #2d6a4f;
+  color: white;
+  border-radius: 50%;
+  font-weight: 800;
+  font-size: 13px;
+}
+
+.completion-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #2d6a4f, #52b788);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 13px 28px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(45, 106, 79, 0.35);
+  transition: all 0.2s;
+  width: 100%;
+  justify-content: center;
+}
+
+.completion-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(45, 106, 79, 0.45);
+}
+
+/* ─── Confetti ───────────────────────────────────────────────────── */
+.confetti-container {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 999;
+}
+
+@keyframes confettiFall {
+  0% {
+    transform: translateY(-10vh) rotate(0deg);
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(110vh) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+.confetti-particle {
+  position: absolute;
+  top: -20px;
+  animation: confettiFall linear infinite;
+}
+

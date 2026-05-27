@@ -159,7 +159,23 @@ export default function Tool2Page() {
 
       <div className="excel-worksheet" style={{ borderColor: 'white' }}>
         <div className="table-responsive">
-          <table className="worksheet-table structured-tool-table">
+          <table className="worksheet-table structured-tool-table tool-2-table">
+            <colgroup>
+              <col className="tool-2-narrow-col" />
+              <col className="tool-2-text-col" />
+              <col className="tool-2-tight-select-col" />
+              <col className="tool-2-tight-select-col" />
+              <col className="tool-2-tight-select-col" />
+              <col className="tool-2-text-col" />
+              <col className="tool-2-text-col" />
+              <col className="tool-2-impact-col" />
+              <col className="tool-2-impact-col" />
+              <col className="tool-2-wide-text-col" />
+              <col className="tool-2-priority-col" />
+              <col className="tool-2-wide-text-col" />
+              <col className="tool-2-text-col" />
+              <col className="tool-2-narrow-col" />
+            </colgroup>
             <thead>
               <tr className="main-header-row">
                 <th rowSpan="2" className="no-col">No.</th>

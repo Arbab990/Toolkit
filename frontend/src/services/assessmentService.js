@@ -15,13 +15,13 @@ export const saveAssessment = async (assessmentData) => {
   if (IS_BYPASS) {
     const assessments = getLocalAssessments();
     const index = assessments.findIndex(a => a.siteId === assessmentData.siteId && a.toolNumber === assessmentData.toolNumber);
-    
+
     if (index !== -1) {
       assessments[index] = assessmentData;
     } else {
       assessments.push(assessmentData);
     }
-    
+
     saveLocalAssessments(assessments);
 
     // Update mock site progress for realism
@@ -50,8 +50,8 @@ export const getAssessment = async (siteId, toolNumber) => {
   if (IS_BYPASS) {
     const assessments = getLocalAssessments();
     const assessment = assessments.find(a => a.siteId === siteId && a.toolNumber === toolNumber);
-    return { 
-      success: true, 
+    return {
+      success: true,
       data: assessment ? assessment.data : null,
       isCompleted: assessment ? assessment.isCompleted : false,
       rating: assessment ? assessment.rating : null
